@@ -1,15 +1,14 @@
 import { Routes, Route } from "react-router-dom"
-import { ThemeProvider } from "./contexts/ThemeContext"
-import Layout from "./components/Layout"
-import Home from "./pages/Home"
-import Cadastro from "./pages/Cadastro"
-import Jogo from "./pages/Jogo"
-import Instrucoes from "./pages/Instrucoes"
-import Referencias from "./pages/Referencias"
-import SobreNos from "./pages/SobreNos"
-import ErrorPage from "./pages/ErrorPage"
+import { ThemeProvider } from "../components/context/ThemeContext"
+import { Layout } from "../components/Layout"
+import { Home }from "../pages/Home"
+import { Jogo } from "../pages/Jogo"
+import { Instrucoes } from "../pages/Instrucoes"
+import { Referencias } from "../pages/Referencias"
+import { SobreNos } from "../pages/SobreNos"
+import { ErrorPage } from "../pages/ErrorPage"
 
-function App() {
+ export function App() {
   return (
     <ThemeProvider>
       <Layout>
@@ -27,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+
