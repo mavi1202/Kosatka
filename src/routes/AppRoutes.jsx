@@ -1,7 +1,7 @@
 // src/AppRoutes.jsx
 import { Routes, Route } from "react-router-dom";
 import  ThemeContext  from "../components/context/ThemeContext";
-import Layout from "../components/Layout"; // Ajuste se Layout for default export
+import Layout from "../components/Layout"; 
 import Home from "../pages/Home";
 import Jogo from "../pages/Jogo";
 import Instrucoes from "../pages/Instrucoes";

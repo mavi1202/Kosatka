@@ -92,7 +92,7 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
               
               },
               {
-                icon: <img src={BotaopH}
+                icon: <img src={botaopH}
                 alt="botao ph"
                 className=""/> ,
                 title: "Monitoramento em Tempo real",
