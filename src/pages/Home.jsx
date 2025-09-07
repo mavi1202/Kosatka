@@ -1,109 +1,185 @@
 import { Link } from "react-router-dom"
+import  Button  from "../components/Button"
+import { Card, CardContent } from "../components/Card"
+import { ArrowRight, Download, Fish, Waves, Droplets } from "lucide-react"
 
-
-export function Home() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-home" style={{ backgroundImage: "url(/images/bg-home.jpg)" }}>
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-deep-800 dark:text-white mb-6">
-            Explore o Mundo
-            <span className="block bg-ocean-gradient bg-clip-text text-transparent">Kosatka</span>
-          </h1>
-          <p className="text-xl text-deep-600 dark:text-deep-300 mb-8 max-w-3xl mx-auto">
-            Dispositivo subaquático desenvolvido para monitorar a qualidade da água em aquários e tanques, medindo parâmetros como pH e acidez, além de liberar substâncias reguladoras automaticamente.Tecnologia que transforma seu aquário em um ecossistema perfeitamente equilibrado.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/Instrucoes">
-              <Button size="lg" className="w-full sm:w-auto">
-                Começar
-              </Button>
-            </Link>
-            <Link to="/Referencias">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-                Ver Referencias
-              </Button>
-            </Link>
+    <div className="flex flex-col min-h-[calc(100vh-4rem)]">
+      {/* Hero Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-hero-pattern"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+            <div className="flex flex-col justify-center space-y-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-4">
+                  <Fish className="h-8 w-8 text-primary floating-element" />
+                  <span className="text-primary font-semibold">AquaTech Solutions</span>
+                </div>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white drop-shadow-lg">
+                  Revolucione Seu Aquário
+                </h1>
+                <p className="max-w-[600px] text-white/90 md:text-xl drop-shadow">
+                  A solução completa para aquaristas que buscam tecnologia, praticidade e resultados excepcionais em
+                  seus aquários.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button asChild size="lg" className="aqua-button">
+                  <Link to="/cadastro">
+                    Começar agora <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="glass-card border-white/30 text-white hover:bg-white/10 bg-transparent"
+                >
+                  <Download className="mr-2 h-4 w-4" /> Download do App
+                </Button>
+              </div>
+            </div>
+            <div className="mx-auto w-full max-w-[500px] aspect-video glass-card rounded-xl overflow-hidden floating-element">
+              <img
+                src="/placeholder.svg"
+                alt="Sistema de aquário inteligente"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center text-deep-800 dark:text-white mb-12">Recursos Principais</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-ocean-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-5-10v20m0-20V3a2 2 0 114 0v1M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-deep-800 dark:text-white mb-2">Jogos Interativos</h3>
-              <p className="text-deep-600 dark:text-deep-300">
-                Aprenda sobre a vida marinha através de jogos educativos e divertidos.
+      {/* Features Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
+                Diferenciais do AquaTech
+              </h2>
+              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
+                Tecnologia de ponta para transformar sua experiência na aquariofilia.
               </p>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-ocean-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-deep-800 dark:text-white mb-2">Conteúdo Educativo</h3>
-              <p className="text-deep-600 dark:text-deep-300">
-                Acesse informações detalhadas sobre ecossistemas marinhos e conservação.
-              </p>
-            </Card>
-
-            <Card className="text-center">
-              <div className="w-16 h-16 bg-ocean-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-deep-800 dark:text-white mb-2">Experiência Imersiva</h3>
-              <p className="text-deep-600 dark:text-deep-300">
-                Interface moderna e responsiva para uma experiência única em qualquer dispositivo.
-              </p>
-            </Card>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-12 mt-12">
+            {[
+              {
+                icon: <Waves className="h-6 w-6" />,
+                title: "Monitoramento Inteligente",
+                description: "Controle automático de pH, temperatura e qualidade da água em tempo real.",
+              },
+              {
+                icon: <Fish className="h-6 w-6" />,
+                title: "Gestão de Peixes",
+                description: "Acompanhe a saúde, alimentação e comportamento dos seus peixes.",
+              },
+              {
+                icon: <Droplets className="h-6 w-6" />,
+                title: "Automação Completa",
+                description: "Sistema automatizado de filtragem, iluminação e dosagem de nutrientes.",
+              },
+            ].map((feature, index) => (
+              <Card
+                key={index}
+                className="glass-card border-white/20 hover:border-white/40 transition-all duration-300 group"
+              >
+                <CardContent className="flex flex-col items-center space-y-2 p-6 text-center">
+                  <div className="rounded-full bg-primary/20 p-3 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                  <p className="text-white/80">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-ocean-gradient">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Pronto para Mergulhar?</h2>
-          <p className="text-xl text-ocean-100 mb-8 max-w-2xl mx-auto">
-            Junte-se a milhares de usuários que já estão explorando o mundo oceânico conosco.
-          </p>
-          <Link to="/cadastro">
-            <Button variant="secondary" size="lg">
-              Criar Conta Gratuita
-            </Button>
-          </Link>
+      {/* Target Audience */}
+      <section className="w-full py-12 md:py-24 lg:py-32 relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
+                Para Todos os Aquaristas
+              </h2>
+              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
+                Nosso sistema foi desenvolvido especialmente para a comunidade aquarística, atendendo desde iniciantes
+                até especialistas:
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12 mt-12">
+            {[
+              {
+                title: "Aquaristas Iniciantes",
+                description:
+                  "Ferramentas e guias para quem está começando no hobby da aquariofilia, com dicas essenciais para montar e manter seu primeiro aquário.",
+              },
+              {
+                title: "Aquaristas Experientes",
+                description:
+                  "Recursos avançados para aquaristas veteranos que buscam otimizar seus sistemas e explorar técnicas mais sofisticadas de aquascaping.",
+              },
+              {
+                title: "Criadores de Peixes",
+                description:
+                  "Soluções especializadas para reprodução e criação de peixes ornamentais, com controle preciso de parâmetros da água.",
+              },
+              {
+                title: "Aquascapers",
+                description:
+                  "Ferramentas para criar paisagens aquáticas deslumbrantes, com foco no design, iluminação e disposição de plantas aquáticas.",
+              },
+            ].map((audience, index) => (
+              <Card
+                key={index}
+                className="glass-card border-white/20 hover:border-white/40 transition-all duration-300"
+              >
+                <CardContent className="flex flex-col space-y-2 p-6">
+                  <h3 className="text-xl font-bold text-white">{audience.title}</h3>
+                  <p className="text-white/80">{audience.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full py-12 md:py-24 lg:py-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
+                Pronto para começar?
+              </h2>
+              <p className="max-w-[600px] md:text-xl/relaxed text-white/90 drop-shadow">
+                Baixe nosso aplicativo agora e transforme seu aquário em um ecossistema inteligente.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <Button asChild size="lg" className="aqua-button">
+                <Link to="/cadastro">
+                  Criar uma conta <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="glass-card border-white/30 text-white hover:bg-white/10 bg-transparent"
+              >
+                <Download className="mr-2 h-4 w-4" /> Download do App
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   )
 }
-
-
-  
-
-
