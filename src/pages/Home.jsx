@@ -4,10 +4,10 @@ import { Card, CardContent } from "../components/Card"
 import { ArrowRight, Download, Fish, Waves, Droplets } from "lucide-react"
 import logoClaro from "../images/logo-claro.png";
 import KosatkaSub from "../images/KosatkaSub.png";
-import Botaomonit from "../images//botaomonitoramento.png";
-import BotaoTurb from "../images//botaoTurb.png";
-import Botaotemp from "../images//botaotemp.png";
-import BotaopH from "../images//BotaopH.png";
+import Botaomonit from "../images/botaomonitoramento.png";
+import BotaoTurb from "../images/botaoTurb.png";
+import Botaotemp from "../images/botaotemp.png";
+import BotaopH from "../images/BotaopH.png";
 
 
 
