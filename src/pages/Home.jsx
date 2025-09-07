@@ -7,7 +7,7 @@ import KosatkaSub from "../images/KosatkaSub.png";
 import Botaomonit from "../images/botaomonitoramento.png";
 import BotaoTurb from "../images/botaoTurb.png";
 import Botaotemp from "../images/botaotemp.png";
-import BotaopH from "../images/BotaopH.png";
+import botaopH from "../images/botaopH.png";
 
 
 
