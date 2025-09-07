@@ -2,11 +2,19 @@ import { Link } from "react-router-dom"
 import  Button  from "../components/Button"
 import { Card, CardContent } from "../components/Card"
 import { ArrowRight, Download, Fish, Waves, Droplets } from "lucide-react"
+import logoClaro from "../images/logo-claro.png";
+import KosatkaSub from "../images/KosatkaSub.png";
+import Botaomonit from "../images//botaomonitoramento.png";
+import BotaoTurb from "../images//botaoTurb.png";
+import Botaotemp from "../images//botaotemp.png";
+import BotaopH from "../images//BotaopH.png";
+
+
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
-      {/* Hero Section */}
+   
       <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -14,21 +22,19 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-4">
-                  <Fish className="h-8 w-8 text-primary floating-element" />
-                  <span className="text-primary font-semibold">AquaTech Solutions</span>
+                  <img src={logoClaro} alt="Logo" className="h-9.5 w-9.5 object-contain floating-element" />
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white drop-shadow-lg">
-                  Revolucione Seu Aquário
+                  KOSATKA
                 </h1>
                 <p className="max-w-[600px] text-white/90 md:text-xl drop-shadow">
-                  A solução completa para aquaristas que buscam tecnologia, praticidade e resultados excepcionais em
-                  seus aquários.
+                  Dispositivo subaquático desenvolvido para monitorar a qualidade da água em aquários e tanques, medindo parâmetros como pH e acidez, além de liberar substâncias reguladoras automaticamente.Tecnologia que transforma seu aquário em um ecossistema perfeitamente equilibrado.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild size="lg" className="aqua-button">
                   <Link to="/cadastro">
-                    Começar agora <ArrowRight className="ml-2 h-4 w-4" />
+                    Começar agora
                   </Link>
                 </Button>
                 <Button
@@ -38,12 +44,14 @@ export default function Home() {
                 >
                   <Download className="mr-2 h-4 w-4" /> Download do App
                 </Button>
+
+
               </div>
             </div>
-            <div className="mx-auto w-full max-w-[500px] aspect-video glass-card rounded-xl overflow-hidden floating-element">
+            <div className="mx-auto w-full max-w-[400px]  floating-element">
               <img
-                src="/placeholder.svg"
-                alt="Sistema de aquário inteligente"
+                src={KosatkaSub}
+                alt="Kosatka"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -56,31 +64,48 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
-                Diferenciais do AquaTech
+              <h2 className=" gap-6 md text-3xl font-bold tracking-tighter md:text-4xl mb-4  text-white drop-shadow-lg ">
+                Diferenciais do Kosatka
               </h2>
-              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
-                Tecnologia de ponta para transformar sua experiência na aquariofilia.
+              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow mb-15">
+                
+Conheça os recursos que tornam nosso projeto único e valioso para nossos usuários.
               </p>
+
+
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 lg:gap-12 mt-12">
+          <div className="mx-auto grid max-w-5xl  gap-8 md:grid-cols-4 lg">
             {[
               {
-                icon: <Waves className="h-6 w-6" />,
-                title: "Monitoramento Inteligente",
-                description: "Controle automático de pH, temperatura e qualidade da água em tempo real.",
+                icon: <img src={Botaomonit}
+                alt="botao monit"
+                className=""/> ,
+                title: "Monitoramento em Tempo real",
+              
               },
               {
-                icon: <Fish className="h-6 w-6" />,
-                title: "Gestão de Peixes",
-                description: "Acompanhe a saúde, alimentação e comportamento dos seus peixes.",
+                icon: <img src={BotaoTurb}
+                alt="botao monit"
+                className=""/> ,
+                title: "Turbidez da água ",
+              
               },
               {
-                icon: <Droplets className="h-6 w-6" />,
-                title: "Automação Completa",
-                description: "Sistema automatizado de filtragem, iluminação e dosagem de nutrientes.",
+                icon: <img src={BotaopH}
+                alt="botao ph"
+                className=""/> ,
+                title: "Monitoramento em Tempo real",
+              
               },
+              {
+                icon: <img src={Botaotemp}
+                alt="botao temp"
+                className=""/> ,
+                title: "Temperatura da água",
+              
+              },
+             
             ].map((feature, index) => (
               <Card
                 key={index}
@@ -104,7 +129,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mt--15  text-white drop-shadow-lg">
                 Para Todos os Aquaristas
               </h2>
               <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
@@ -181,5 +206,8 @@ export default function Home() {
         </div>
       </section>
     </div>
+
+  
+
   )
 }

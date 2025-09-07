@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../components/Card"
-import  Button  from "../components/Button"
 import { ShoppingCart, Star, Filter, Thermometer, Droplets, Lightbulb } from "lucide-react"
 
 export default function Produtos() {
@@ -89,58 +87,60 @@ export default function Produtos() {
         {/* Filtros */}
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {categorias.map((categoria) => (
-            <Button
+            <button
               key={categoria}
-              variant="outline"
-              className="glass-card border-white/30 text-white hover:bg-primary/20 bg-transparent"
+              className="glass-card border border-white/30 text-white hover:bg-primary/20 bg-transparent px-4 py-2 rounded-lg flex items-center gap-2"
             >
-              <Filter className="w-4 h-4 mr-2" />
+              <Filter className="w-4 h-4" />
               {categoria}
-            </Button>
+            </button>
           ))}
         </div>
 
         {/* Grid de Produtos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {produtos.map((produto) => (
-            <Card
+            <div
               key={produto.id}
-              className="glass-card border-white/20 hover:border-white/40 transition-all duration-300 group"
+              className="glass-card border border-white/20 hover:border-white/40 transition-all duration-300 group rounded-lg overflow-hidden"
             >
-              <CardHeader className="p-0">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={produto.imagem || "/placeholder.svg"}
-                    alt={produto.nome}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {produto.precoOriginal > produto.preco && (
-                    <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
-                      -{Math.round(((produto.precoOriginal - produto.preco) / produto.precoOriginal) * 100)}%
-                    </div>
-                  )}
-                  <div className="absolute top-2 left-2 bg-primary/80 text-white px-2 py-1 rounded text-sm">
-                    {produto.categoria}
+              <div className="relative overflow-hidden">
+                <img
+                  src={produto.imagem}
+                  alt={produto.nome}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                {produto.precoOriginal > produto.preco && (
+                  <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
+                    -{Math.round(((produto.precoOriginal - produto.preco) / produto.precoOriginal) * 100)}%
                   </div>
+                )}
+                <div className="absolute top-2 left-2 bg-primary/80 text-white px-2 py-1 rounded text-sm">
+                  {produto.categoria}
                 </div>
-              </CardHeader>
-              <CardContent className="p-4">
+              </div>
+
+              <div className="p-4">
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${i < Math.floor(produto.avaliacao) ? "text-yellow-400 fill-current" : "text-gray-400"}`}
+                      className={`w-4 h-4 ${
+                        i < Math.floor(produto.avaliacao) ? "text-yellow-400 fill-current" : "text-gray-400"
+                      }`}
                     />
                   ))}
                   <span className="text-white/80 text-sm ml-1">({produto.avaliacao})</span>
                 </div>
 
-                <CardTitle className="text-white text-lg mb-2">{produto.nome}</CardTitle>
+                <h3 className="text-white text-lg font-semibold mb-2">{produto.nome}</h3>
                 <p className="text-white/70 text-sm mb-3 line-clamp-2">{produto.descricao}</p>
 
                 <div className="space-y-1 mb-3">
                   {produto.especificacoes.slice(0, 2).map((spec, index) => (
-                    <div key={index} className="text-white/60 text-xs">• {spec}</div>
+                    <div key={index} className="text-white/60 text-xs">
+                      • {spec}
+                    </div>
                   ))}
                 </div>
 
@@ -151,30 +151,45 @@ export default function Produtos() {
                       <span className="text-white/50 text-sm line-through">R$ {produto.precoOriginal.toFixed(2)}</span>
                     )}
                   </div>
-                  <Button size="sm" className="aqua-button">
-                    <ShoppingCart className="w-4 h-4 mr-1" /> Comprar
-                  </Button>
+                  <button className="aqua-button flex items-center px-3 py-2 rounded-lg text-white bg-blue-500 hover:bg-blue-600 text-sm">
+                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    Comprar
+                  </button>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Resumo do Projeto */}
-        <Card className="glass-card border-white/20 max-w-4xl mx-auto">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl text-center">Projeto Completo AquaTech</CardTitle>
-            <p className="text-white/80 text-center">Sistema completo de aquário inteligente com todos os equipamentos necessários</p>
-          </CardHeader>
-          <CardContent>
+        <div className="glass-card border border-white/20 max-w-4xl mx-auto rounded-lg overflow-hidden">
+          <div className="p-6 border-b border-white/20 text-center">
+            <h2 className="text-white text-2xl font-bold mb-2">Projeto Completo AquaTech</h2>
+            <p className="text-white/80">
+              Sistema completo de aquário inteligente com todos os equipamentos necessários
+            </p>
+          </div>
+          <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-lg">Características do Sistema:</h3>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-white/80"><Thermometer className="w-4 h-4 text-primary" /> Controle automático de temperatura</div>
-                  <div className="flex items-center gap-2 text-white/80"><Droplets className="w-4 h-4 text-primary" /> Monitoramento de qualidade da água</div>
-                  <div className="flex items-center gap-2 text-white/80"><Lightbulb className="w-4 h-4 text-primary" /> Iluminação inteligente programável</div>
-                  <div className="flex items-center gap-2 text-white/80"><Filter className="w-4 h-4 text-primary" /> Sistema de filtragem avançado</div>
+                  <div className="flex items-center gap-2 text-white/80">
+                    <Thermometer className="w-4 h-4 text-primary" />
+                    <span>Controle automático de temperatura</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/80">
+                    <Droplets className="w-4 h-4 text-primary" />
+                    <span>Monitoramento de qualidade da água</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/80">
+                    <Lightbulb className="w-4 h-4 text-primary" />
+                    <span>Iluminação inteligente programável</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/80">
+                    <Filter className="w-4 h-4 text-primary" />
+                    <span>Sistema de filtragem avançado</span>
+                  </div>
                 </div>
               </div>
 
@@ -190,21 +205,24 @@ export default function Produtos() {
               </div>
             </div>
 
-            <div className="border-t border-white/20 pt-6">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-center md:text-left">
-                  <div className="text-white/80 text-sm">Valor total do projeto:</div>
-                  <div className="text-3xl font-bold text-primary">R$ {valorTotal.toFixed(2)}</div>
-                  <div className="text-white/60 text-sm">Em até 12x sem juros</div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Button size="lg" className="aqua-button"><ShoppingCart className="w-5 h-5 mr-2" /> Comprar Projeto Completo</Button>
-                  <Button variant="outline" size="lg" className="glass-card border-white/30 text-white bg-transparent">Solicitar Orçamento</Button>
-                </div>
+            <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="text-center md:text-left">
+                <div className="text-white/80 text-sm">Valor total do projeto:</div>
+                <div className="text-3xl font-bold text-primary">R$ {valorTotal.toFixed(2)}</div>
+                <div className="text-white/60 text-sm">Em até 12x sem juros</div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <button className="aqua-button flex items-center justify-center px-4 py-3 rounded-lg text-white bg-blue-500 hover:bg-blue-600 text-lg">
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Comprar Projeto Completo
+                </button>
+                <button className="glass-card border border-white/30 text-white bg-transparent px-4 py-3 rounded-lg text-lg">
+                  Solicitar Orçamento
+                </button>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </div>
   )

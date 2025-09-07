@@ -1,16 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../components/Layout";
+// src/AppRoutes.jsx
+import { Routes, Route } from "react-router-dom";
+import  ThemeContext  from "../components/context/ThemeContext";
+import Layout from "../components/Layout"; // Ajuste se Layout for default export
 import Home from "../pages/Home";
 import Jogo from "../pages/Jogo";
 import Instrucoes from "../pages/Instrucoes";
 import Referencias from "../pages/Referencias";
 import SobreNos from "../pages/SobreNos";
-import Produtos from "../pages/Produtos";
 import ErrorPage from "../pages/ErrorPage";
+import Produtos from "../pages/Produtos";
 
 export default function AppRoutes() {
   return (
-    
+ 
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +24,6 @@ export default function AppRoutes() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Layout>
-   
+  
   );
 }

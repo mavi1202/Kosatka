@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom"
 import  Button  from "../components/Button"
 import { ModeToggle } from "./ModeTogglee"
 import { Menu, X, Fish } from "lucide-react"
-import { cn } from "../lib/utils" // Se você estiver usando a função cn
+import { cn } from "../lib/utils"
+import logoClaro from "../images/logo-claro.png";
 
 const navItems = [
   { name: "Início", href: "/" },
@@ -11,8 +12,7 @@ const navItems = [
   { name: "Produtos", href: "/produtos" },
   { name: "Quem Somos", href: "/quem-somos" },
   { name: "Referências", href: "/referencias" },
-  { name: "Jogo", href: "/jogo" },
-  { name: "Perfil", href: "/perfil" },
+  { name: "Jogo", href: "/jogo" }
 ]
 
 export function Navigation() {
@@ -25,8 +25,7 @@ export function Navigation() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
-            <Fish className="h-6 w-6" />
-            Kosatka
+           <img src={logoClaro} alt="Logo" className="h-10 w-10 object-contain" />
           </Link>
         </div>
 
