@@ -10,7 +10,7 @@ const navItems = [
   { name: "Início", href: "/" },
   { name: "Instruções", href: "/instrucoes" },
   { name: "Produtos", href: "/produtos" },
-  { name: "Quem Somos", href: "/quem-somos" },
+  { name: "Quem Somos", href: "/sobrenos " },
   { name: "Referências", href: "/referencias" },
   { name: "Jogo", href: "/jogo" }
 ]

@@ -19,7 +19,7 @@ export default function AppRoutes() {
           <Route path="/jogo" element={<Jogo />} />
           <Route path="/instrucoes" element={<Instrucoes />} />
           <Route path="/referencias" element={<Referencias />} />
-          <Route path="/sobre-nos" element={<SobreNos />} />
+          <Route path="/sobrenos" element={<SobreNos />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

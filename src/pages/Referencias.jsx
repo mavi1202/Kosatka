@@ -2,6 +2,8 @@ import React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "../components/Card"
 import  Button from "../components/Button"
 import { ExternalLink, BookOpen, FileText, Globe, Users } from "lucide-react"
+import seta from "../images/seta pra baixo.png";
+import imgref from "../images/background_referencias_escuro.png";
 
 export default function Referencias() {
   const referencias = [
@@ -10,73 +12,83 @@ export default function Referencias() {
       icon: <FileText className="w-5 h-5" />,
       items: [
         {
-          titulo: "Automated Aquarium Monitoring Systems: A Review",
-          autores: "Smith, J., Johnson, M., & Brown, K.",
-          revista: "Journal of Aquatic Technology",
-          ano: "2023",
-          link: "https://example.com/article1",
-          resumo: "Revisão abrangente sobre sistemas automatizados de monitoramento de aquários e suas aplicações práticas.",
+          titulo: " A ECOTOXICOLOGIA COMO FERRAMENTA NO BIOMONITORAMENTO DE ECOSSISTEMAS AQUÁTICOS",
+          autores: "Magalhães, Danielly de Paiva Ferrão Filho, Aloysio da Silva",
+          
+          ano: "2008",
+          link: "https://arca.fiocruz.br/items/3ccf6893-a383-4c5e-a9dc-134bc4f168ad",
+          resumo: "O artigo apresenta a ecotoxicologia como uma ciência essencial para avaliar os impactos de poluentes nos ecossistemas aquáticos. Destaca o uso de organismos bioindicadores e testes ecotoxicológicos para monitorar a qualidade da água e preservar a biodiversidade.",
         },
         {
-          titulo: "IoT Applications in Aquaculture: Current Trends and Future Prospects",
-          autores: "Garcia, L., Martinez, R., & Silva, A.",
-          revista: "Aquaculture Engineering Review",
+          titulo: "COMPUTAÇÃO EMBARCADA NA AUTOMATIZAÇÃO DE AQUÁRIOS MARINHOS",
+          autores: "Giovani Begnini Pinzetta, José Antônio Oliveira de Figueiredo",
           ano: "2022",
-          link: "https://example.com/article2",
-          resumo: "Análise das aplicações de IoT na aquicultura e perspectivas futuras para automação.",
+          link: "https://painel.passofundo.ifsul.edu.br/uploads/arq/202302071428571963938365.pdf",
+          resumo: "Este trabalho explora como a computação embarcada pode ser aplicada na automação de aquários marinhos, garantindo o controle preciso de variáveis como temperatura, iluminação e pH. A proposta visa facilitar a manutenção e melhorar o ambiente para os organismos marinhos.",
         },
-      ],
-    },
-    {
-      categoria: "Livros e Publicações",
-      icon: <BookOpen className="w-5 h-5" />,
-      items: [
         {
-          titulo: "The Complete Guide to Freshwater Aquariums",
-          autores: "Anderson, M.",
-          editora: "Aquatic Press",
-          ano: "2022",
-          link: "https://example.com/book1",
-          resumo: "Guia completo para iniciantes e avançados na aquariofilia de água doce.",
+          titulo: "AUTOMAÇÃO E CONTROLE DE TANQUE PARA PISCICULTURA ",
+          autores: "João C. P. Beck, Isaac N. L. da Silva",
+          ano: "2006",
+          link: "https://admin.abenge.org.br/cobenge/legado/arquivos/13/artigos/6_287_390.pdf",
+          resumo: "O artigo propõe um sistema automatizado para controlar a alimentação e as condições ambientais de tanques de piscicultura. O objetivo é aumentar a eficiência da produção e garantir o bem-estar dos peixes, utilizando sensores e controladores eletrônicos.",
         },
+        {
+          titulo: "AUTOMAÇÃO E MONITORAMENTO SilvaEM AQUÁRIOS UTILIZANDO ARDUÍNO",
+          autores: "Pedro Henrique Arantes de Souza1Marlon Hugo Rodrigues da Silva Ricardo Bernardes de Mello Fabricio Pelloso Piurscosky Wariston Fernando Pereira ",
+          ano: "2006",
+          link: "file:///C:/Users/maria/Downloads/admin,+AUTOMA%C3%87%C3%83O+E+MONITORAMENTO+EM+AQU%C3%81RIOS+UTILIZANDO+ARDU%C3%8DNO.pdf",
+          resumo: "Foca na criação de um sistema automatizado baseado em Arduino para monitorar temperatura, luminosidade e nível da água em aquários. A solução oferece baixo custo e facilidade de uso para quem deseja automatizar o cuidado com peixes e plantas aquáticas.",
+        },
+        {
+          titulo: "SISTEMA DE MONITORAMENTO E CONTROLE DE TEMPERATURA DA ÁGUA DE UM AQUÁRIO",
+          autores: "	Oliveira Junior, Aguinaldo José Rodrigues deOliveira, Eduardo Henrique Hurla deMarques, Lucas Damazio ",
+          ano: "2019",
+          link: "PG_DAELE_2019_2_03.pdf",
+          resumo: "O estudo desenvolve um sistema para medir e controlar a temperatura da água em aquários usando sensores e microcontroladores. A proposta visa manter condições ideais para os organismos, evitando variações que possam comprometer sua saúde.",
+        }
+        
       ],
     },
+
   ]
 
-  const estatisticas = [
-    { numero: "25+", label: "Artigos Consultados" },
-    { numero: "15+", label: "Livros Referenciados" },
-  ]
+ 
+  
 
   return (
+    <div
+      className="page-background"
+      style={{
+        backgroundImage: `url(${imgref})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center ",
+        backgroundRepeat: "no-repeat",
+      }}
+    > 
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
+       <div className="text-center mb-12 bg-[#035F8E]/20 backdrop--md p-8 ">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Referências</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">Fontes confiáveis para soluções sustentáveis.</h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto">
-            Todo o conhecimento científico e técnico que fundamentou o desenvolvimento do projeto AquaTech.
-          </p>
+Os conteúdos desta seção foram selecionados a partir de artigos científicos e acadêmicos relevantes, com foco em automação, monitoramento ambiental e ecossistemas aquáticos. </p>
+<img
+        src={seta} 
+      alt="Seta indicando"
+       className="mx-auto mt-10 h-20 w-auto animate-bounce"
+  />
+        </div>
         </div>
 
-        {/* Estatísticas */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {estatisticas.map((stat, i) => (
-            <Card key={i} className="glass-card border-white/20 text-center">
-              <CardContent className="p-4">
-                <div className="text-2xl font-bold text-primary mb-1">{stat.numero}</div>
-                <div className="text-white/80 text-sm">{stat.label}</div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
 
-        {/* Referências por Categoria */}
+
+       
         <div className="space-y-8">
           {referencias.map((cat, i) => (
-            <Card key={i} className="glass-card border-white/20">
+            <Card key={i} className="bg-[#035F8E]/57 backdrop-blur-md">
               <CardHeader>
-                <CardTitle className="text-white text-xl flex items-center gap-2">
+                <CardTitle className="text-white text-x1 flex items-center gap-5">
                   {cat.icon}
                   {cat.categoria}
                 </CardTitle>
@@ -85,23 +97,22 @@ export default function Referencias() {
                 <div className="space-y-4">
                   {cat.items.map((item, j) => (
                     <Card key={j} className="glass-card border-white/10 hover:border-white/30 transition-all duration-300">
-                      <CardContent className="p-4">
+                      <CardContent className="p-8 mb-7">
                         <div className="flex flex-col md:flex-row md:items-start gap-4">
-                          <div className="flex-1">
-                            <h3 className="text-white font-semibold mb-2">{item.titulo}</h3>
-                            {item.autores && <p className="text-white/70 text-sm mb-1"><strong>Autores:</strong> {item.autores}</p>}
-                            {item.revista && <p className="text-white/70 text-sm mb-1"><strong>Revista:</strong> {item.revista}</p>}
-                            {item.editora && <p className="text-white/70 text-sm mb-1"><strong>Editora:</strong> {item.editora}</p>}
+                          <div className="flex-1 ">
+                            <h3 className="text-white font-semibold mt-5 mb-2">{item.titulo}</h3>
+                            {item.autores && <p className="text-white/70 text-sm mb-2"><strong>Autores:</strong> {item.autores}</p>}
                             {item.ano && <p className="text-white/70 text-sm mb-2"><strong>Ano:</strong> {item.ano}</p>}
                             <p className="text-white/60 text-sm">{item.resumo}</p>
                           </div>
                           <Button
+                          
                             variant="outline"
                             size="sm"
-                            className="glass-card border-primary/30 text-primary hover:bg-primary/10 flex-shrink-0 bg-transparent"
+                            className=" glass-card border-primary/30 text-primary hover:bg-primary/10 flex-shrink-0 bg-transparent mt-4 "
                             onClick={() => window.open(item.link, "_blank")}
                           >
-                            <ExternalLink className="w-4 h-4 mr-1" />
+                            <ExternalLink className="w-4 h-4 mr-1 " />
                             Acessar
                           </Button>
                         </div>
@@ -114,6 +125,7 @@ export default function Referencias() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   )
 }

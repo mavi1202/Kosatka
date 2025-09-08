@@ -15,6 +15,17 @@ import Botaoaquaristas from "../images/botaoAquaristas.png";
 
 export default function Home() {
   return (
+    <div
+  className="page-background"
+  style={{
+    backgroundImage: `url(${Background_home})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center ",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+
+    
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
    
       <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
@@ -214,6 +225,7 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
           </div>
         </div>
       </section>
+    </div>
     </div>
 
   

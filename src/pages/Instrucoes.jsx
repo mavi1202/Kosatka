@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../components/Button"; 
 import { Play, Download, CheckCircle, AlertCircle, Info } from "lucide-react";
 import seta from "../images/seta pra baixo.png";
+import instrucoesesc from "../images/background_instrucoes_escuro.png";
 
 function Card({ children, className = "" }) {
   return (
@@ -72,10 +73,20 @@ export default function Instrucoes() {
   
   
   return (
+
+     <div
+      className="page-background"
+      style={{
+        backgroundImage: `url(${instrucoesesc})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center ",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
     
-       <div className="text-center mb-12 bg-teal-800/55 backdrop-blur-md p-8 ">
+       <div className="text-center mb-12 bg-[#00556B]/50 backdrop-md p-8 ">
           <h1 className="text-4xl font-bold text-white mb-4">Instruções de uso </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto mb-6">
             Siga este manual passo a passo para montar seu sistema Kosatka completo e ter um aquário inteligente
@@ -179,6 +190,7 @@ export default function Instrucoes() {
           </Card>
           <p className="text-center text-white max-w-lg mx-auto" >Assista ao vídeo e conheça como nosso sistema monitora e cuida do aquário de forma prática, eficiente e automática.</p>
       </div>
+    </div>
     </div>
   );
 }

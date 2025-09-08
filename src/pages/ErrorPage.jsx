@@ -5,8 +5,7 @@ import { Card, CardContent } from "../components/Card";
 const ErrorPage = () => {
   return (
     <div
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-error"
-      style={{ backgroundImage: "url(/images/bg-error.jpg)" }}
+      
     >
       <Card className="text-center max-w-md mx-auto">
         <CardContent>

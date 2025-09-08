@@ -1,4 +1,5 @@
 import { ShoppingCart, Star, Filter, Thermometer, Droplets, Lightbulb } from "lucide-react"
+import pagprodutos from "../images/background_produtos_escuro.png";
 
 export default function Produtos() {
   const produtos = [
@@ -74,6 +75,15 @@ export default function Produtos() {
   const valorTotal = produtos.reduce((total, produto) => total + produto.preco, 0)
 
   return (
+
+    <div
+          className="page-background"
+          style={{
+            backgroundImage: `url(${pagprodutos})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center ",
+            backgroundRepeat: "no-repeat",
+          }}>
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -225,5 +235,7 @@ export default function Produtos() {
         </div>
       </div>
     </div>
+    </div>
+  
   )
 }
