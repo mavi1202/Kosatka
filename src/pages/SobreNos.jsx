@@ -3,40 +3,40 @@ import { Github, InstagramIcon, Mail, Phone, MapPin, Send } from "lucide-react"
 export default function SobreNos() {
   const membros = [
     {
-      nome: "Maria Vitótia Brreto",
+      nome: "Maria Vitótia Barreto",
       cargo: "Desenvolvedora Full Stack",
       foto: "/placeholder.svg?height=300&width=300&text=Ana+Silva",
       bio: "Especialista em React e Node.js com 5 anos de experiência em desenvolvimento web. Apaixonada por tecnologia e aquariofilia.",
-      github: "https://github.com/anasilva",
-      linkedin: "https://linkedin.com/in/anasilva",
-      email: "ana@aquatech.com",
+      github: "https://github.com/mavi1202",
+      linkedin: "https://www.linkedin.com/in/mariavitoriabq/",
+      email: "mariavitoriabarreto2@gmail.com",
     },
     {
       nome: "Lavínia Reis",
       cargo: "Engenheiro de Hardware",
       foto: "/placeholder.svg?height=300&width=300&text=Carlos+Santos",
       bio: "Engenheiro eletrônico especializado em IoT e sistemas embarcados. Responsável pelo desenvolvimento dos sensores inteligentes.",
-      github: "https://github.com/carlossantos",
-      linkedin: "https://linkedin.com/in/carlossantos",
-      email: "carlos@aquatech.com",
+      github: "https://github.com/23lavi",
+      linkedin: "https://www.linkedin.com/in/lav%C3%ADnia-reis-508b59338/",
+      email: "laviniareis@eaportal.org",
     },
     {
       nome: "Gabriel Porsi",
       cargo: "Designer UX/UI",
       foto: "/placeholder.svg?height=300&width=300&text=Maria+Oliveira",
       bio: "Designer com foco em experiência do usuário e interfaces intuitivas. Criou toda a identidade visual do projeto AquaTech.",
-      github: "https://github.com/mariaoliveira",
-      linkedin: "https://linkedin.com/in/mariaoliveira",
-      email: "maria@aquatech.com",
+      github: "https://github.com/porsii800",
+      linkedin: "https://www.linkedin.com/in/gabriel-porsi-pinheiro-aa9403338/",
+      email: "gabrielporsi@eaportal.org",
     },
     {
       nome: "Julia Mariana Afonso",
       cargo: "Especialista em Aquariofilia",
       foto: "/placeholder.svg?height=300&width=300&text=João+Costa",
       bio: "Biólogo marinho com 15 anos de experiência em aquariofilia. Consultor técnico para parâmetros ideais de água e peixes.",
-      github: "https://github.com/joaocosta",
-      linkedin: "https://linkedin.com/in/joaocosta",
-      email: "joao@aquatech.com",
+      github: "https://github.com/juliaferraz12",
+      linkedin: "https://www.linkedin.com/in/julia-mariana-ab3100339/",
+      email: "juliamarianaafonsof@gmail.com",
     },
   ]
 
@@ -111,7 +111,7 @@ export default function SobreNos() {
           ))}
         </div>
 
-        {/* Equipe */}
+       
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Nossa Equipe</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -149,14 +149,13 @@ export default function SobreNos() {
           </div>
         </div>
 
-        {/* Contato */}
         <div className="rounded-xl bg-white/10 border border-white/20 shadow-md max-w-4xl mx-auto p-8">
           <h2 className="text-white text-2xl text-center mb-2">Entre em Contato</h2>
           <p className="text-white/80 text-center mb-8">
             Tem alguma dúvida ou sugestão? Adoraríamos ouvir de você!
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Info */}
+          
             <div className="space-y-6">
               <h3 className="text-white font-semibold text-lg">Informações de Contato</h3>
               <div className="space-y-4">
@@ -164,14 +163,14 @@ export default function SobreNos() {
                   <Mail className="w-5 h-5 text-blue-400" />
                   <div>
                     <p className="text-white font-medium">E-mail</p>
-                    <p className="text-white/70">contato@aquatech.com</p>
+                    <p className="text-white/70">Kosatka671@hmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-blue-400" />
                   <div>
                     <p className="text-white font-medium">Telefone</p>
-                    <p className="text-white/70">(11) 99999-9999</p>
+                    <p className="text-white/70">(11) 95973-9398</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -191,14 +190,14 @@ export default function SobreNos() {
                   <a href="https://linkedin.com" target="_blank" className="p-2 rounded-full hover:bg-blue-500/20">
                     <Linkedin className="w-5 h-5 text-white/70 hover:text-blue-400" />
                   </a>
-                  <a href="mailto:contato@aquatech.com" className="p-2 rounded-full hover:bg-blue-500/20">
+                  <a href="mailto:kosatka671@gmail.com" className="p-2 rounded-full hover:bg-blue-500/20">
                     <Mail className="w-5 h-5 text-white/70 hover:text-blue-400" />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
+            
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">

@@ -81,49 +81,30 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
 
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl  gap-8 md:grid-cols-4 lg">
-            {[
-              {
-                icon: <img src={Botaomonit}
-                alt="botao monit"
-                className=""/> ,
-                title: "Monitoramento em Tempo real",
-              
-              },
-              {
-                icon: <img src={BotaoTurb}
-                alt="botao monit"
-                className=""/> ,
-                title: "Turbidez da água ",
-              
-              },
-              {
-                icon: <img src={botaopH}
-                alt="botao ph"
-                className=""/> ,
-                title: "Monitoramento em Tempo real",
-              
-              },
-              {
-                icon: <img src={Botaotemp}
-                alt="botao temp"
-                className=""/> ,
-                title: "Temperatura da água",
-              
-              },
-             
-            ].map((feature, index) => (
-              
-                <CardContent className="flex flex-col items-center space-y-2 p-6 text-center">
-                  <div className="  p-3 text-primary group-hover:bg-primary transition-all duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  <p className="text-white/80">{feature.description}</p>
-                </CardContent>
-             
-            ))}
-          </div>
+         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-4 lg:grid-cols-4">
+  {[
+    { icon: Botaomonit, title: "Monitoramento em Tempo real" },
+    { icon: BotaoTurb, title: "Turbidez da água" },
+    { icon: botaopH, title: "Monitoramento de pH" },
+    { icon: Botaotemp, title: "Temperatura da água" },
+  ].map((feature, index) => (
+    <CardContent
+      key={index}
+      className="flex flex-col items-center space-y-2 p-6 text-center group cursor-pointer"
+    >
+      <div className="p-3  transition-all duration-300 group-hover:scale-110">
+        <img
+          src={feature.icon}
+          alt={feature.title}
+          className="w-32 h-32 object-contain"
+        />
+      </div>
+      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+      <p className="text-white/80">{feature.description}</p>
+    </CardContent>
+  ))}
+</div>
+
         </div>
       </section>
 
@@ -168,19 +149,19 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
   ].map((audience, index) => (
     <Card
       key={index}
-      className="glass-card border-white/20 hover:border-white/40 transition-all duration-300 w-full h-[150px]"
+      className="glass-card border-white/20 hover:border-cyan-500 transition-all duration-300 w-full h-[150px]"
     >
-      <CardContent className="flex items-center gap-4 p-6">
+      <CardContent className="flex items-center gap-4 p-6 group cursor-pointer">
     
-        <div className="flex-shrink-0 w-45 h-35 flex items-center justify-center">
+        <div className=" mt - 9 flex-shrink-0 w-45 h- flex items-center justify-center transition-all duration-300 group-hover:scale-110">
           <img
             src={audience.image}
             alt={audience.title}
-            className="w-12 h-12 object-contain"
+            className="w-25 h-25 object-contain"
           />
         </div>
 
-        {/* Texto à direita */}
+       
         <div className="flex flex-col justify-center text-left">
           <h3 className="text-lg font-bold text-white">{audience.title}</h3>
           <p className="text-white/80 text-sm leading-snug">{audience.description}</p>
@@ -195,7 +176,6 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
       
       </section>
 
-      {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
