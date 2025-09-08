@@ -86,7 +86,7 @@ Os conteúdos desta seção foram selecionados a partir de artigos científicos 
        
         <div className="space-y-8">
           {referencias.map((cat, i) => (
-            <Card key={i} className="bg-[#035F8E]/57 backdrop-blur-md">
+            <Card key={i} className="bg-[#035F8E]/ backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-white text-x1 flex items-center gap-5">
                   {cat.icon}

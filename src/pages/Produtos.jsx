@@ -1,14 +1,21 @@
 import { ShoppingCart, Star, Filter, Thermometer, Droplets, Lightbulb } from "lucide-react"
 import pagprodutos from "../images/background_produtos_escuro.png";
+import ph from "../images/sensor de ph.jpg";
+import temp from "../images/sensor de temperatura.jpg";
+import turb from "../images/sensor de turbidez.jpg";
+import fil from "../images/filamento branco.jpg";
+import leds from "../images/leds.jpeg";
+import esp from "../images/esp32.jpg";
+import seta from "../images/seta pra baixo.png";
 
 export default function Produtos() {
   const produtos = [
     {
       id: 1,
       nome: "Sensor de pH Digital",
-      preco: 89.9,
-      precoOriginal: 120.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=Sensor+pH",
+      preco: 99.9,
+      
+      imagem: ph,
       categoria: "Sensores",
       avaliacao: 4.8,
       descricao: "Sensor de pH digital de alta precisão para monitoramento contínuo da água do aquário.",
@@ -16,58 +23,53 @@ export default function Produtos() {
     },
     {
       id: 2,
-      nome: "Termostato Inteligente",
-      preco: 156.9,
-      precoOriginal: 200.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=Termostato",
-      categoria: "Aquecimento",
+      nome: "Sensor de Temperatura",
+      preco: 99,
+      imagem: temp,
+      categoria: "Sensores",
       avaliacao: 4.9,
       descricao: "Termostato inteligente com controle automático de temperatura via app.",
       especificacoes: ["Potência: 100W", "Faixa: 18-32°C", "Precisão: ±0.5°C", "WiFi integrado"],
     },
     {
       id: 3,
-      nome: "Sistema de Filtragem UV",
-      preco: 299.9,
-      precoOriginal: 380.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=Filtro+UV",
-      categoria: "Filtragem",
-      avaliacao: 4.7,
-      descricao: "Sistema completo de filtragem com esterilizador UV para aquários até 200L.",
+      nome: "Sensor de Turbidez",
+      preco: 99.9,
+      imagem: turb,
+      categoria: "Sensores",
+      avaliacao: 4,
+      descricao: "Sistema completo de turbidez para aquários até 200L.",
       especificacoes: ["Capacidade: 200L", "UV: 9W", "Vazão: 500L/h", "3 estágios de filtração"],
     },
     {
       id: 4,
-      nome: "LED Aquário Full Spectrum",
-      preco: 234.9,
-      precoOriginal: 300.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=LED+Aquário",
-      categoria: "Iluminação",
+      nome: "LED´S",
+      preco: 9.99,
+      imagem: leds,
+      categoria: "leds",
       avaliacao: 4.6,
-      descricao: "Iluminação LED full spectrum com controle de intensidade e timer programável.",
-      especificacoes: ["Potência: 30W", "Espectro: 380-780nm", "Timer: 24h", "Controle remoto"],
+      descricao: "Leds simles",
+      especificacoes: ["Tensão de alimentação: 3.2 ~3.8V", "Luminosidade: 20.000 MCD","Corrente máxima: 25mA"],
     },
     {
       id: 5,
-      nome: "Bomba de Circulação",
+      nome: "Filamento",
       preco: 78.9,
-      precoOriginal: 95.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=Bomba",
-      categoria: "Circulação",
+      imagem: fil,
+      categoria: "Impressão 3D",
       avaliacao: 4.5,
-      descricao: "Bomba de circulação silenciosa para melhor oxigenação da água.",
-      especificacoes: ["Vazão: 1000L/h", "Potência: 15W", "Ruído: <30dB", "Magnética"],
+      descricao: "Filamento branco",
+      especificacoes: [ "1,75 mm ± 0,02 mm", "PLA"],
     },
     {
       id: 6,
-      nome: "Kit Teste Completo",
+      nome: "ESP 32",
       preco: 45.9,
-      precoOriginal: 60.0,
-      imagem: "/placeholder.svg?height=300&width=300&text=Kit+Teste",
-      categoria: "Testes",
-      avaliacao: 4.4,
-      descricao: "Kit completo para teste de pH, amônia, nitrito, nitrato e dureza da água.",
-      especificacoes: ["5 tipos de teste", "100 testes cada", "Precisão alta", "Fácil uso"],
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador System on a Chip (SoC) de baixo custo e baixo consumo da Espressif Systems, conhecido por integrar Wi-Fi.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
     },
   ]
 
@@ -86,28 +88,22 @@ export default function Produtos() {
           }}>
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Nossos Produtos</h1>
+   <div className="text-center  mb-12 bg-[#126895]/20 backdrop--md p-8 ">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-white  mb-8">Materiais do projeto, em detalhes.</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Conheça todos os equipamentos utilizados no projeto AquaTech e monte seu aquário inteligente completo.
+            Nesta página, você confere os componentes usados no desenvolvimento do sistema de monitoramento, junto com seus respectivos valores.
           </p>
+          <img
+                  src={seta} 
+                alt="Seta indicando"
+                 className="mx-auto mt-10 h-20 w-auto animate-bounce"
+            />
         </div>
+</div>
+     
 
-        {/* Filtros */}
-        <div className="flex flex-wrap gap-2 mb-8 justify-center">
-          {categorias.map((categoria) => (
-            <button
-              key={categoria}
-              className="glass-card border border-white/30 text-white hover:bg-primary/20 bg-transparent px-4 py-2 rounded-lg flex items-center gap-2"
-            >
-              <Filter className="w-4 h-4" />
-              {categoria}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid de Produtos */}
+   
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {produtos.map((produto) => (
             <div
@@ -171,10 +167,10 @@ export default function Produtos() {
           ))}
         </div>
 
-        {/* Resumo do Projeto */}
+      
         <div className="glass-card border border-white/20 max-w-4xl mx-auto rounded-lg overflow-hidden">
           <div className="p-6 border-b border-white/20 text-center">
-            <h2 className="text-white text-2xl font-bold mb-2">Projeto Completo AquaTech</h2>
+            <h2 className="text-white text-2xl font-bold mb-2">Kosatka : Projeto Completo</h2>
             <p className="text-white/80">
               Sistema completo de aquário inteligente com todos os equipamentos necessários
             </p>
@@ -194,11 +190,11 @@ export default function Produtos() {
                   </div>
                   <div className="flex items-center gap-2 text-white/80">
                     <Lightbulb className="w-4 h-4 text-primary" />
-                    <span>Iluminação inteligente programável</span>
+                    <span>Turbidez</span>
                   </div>
                   <div className="flex items-center gap-2 text-white/80">
                     <Filter className="w-4 h-4 text-primary" />
-                    <span>Sistema de filtragem avançado</span>
+                    <span>Esp32 controlação</span>
                   </div>
                 </div>
               </div>
@@ -219,16 +215,15 @@ export default function Produtos() {
               <div className="text-center md:text-left">
                 <div className="text-white/80 text-sm">Valor total do projeto:</div>
                 <div className="text-3xl font-bold text-primary">R$ {valorTotal.toFixed(2)}</div>
-                <div className="text-white/60 text-sm">Em até 12x sem juros</div>
+           
               </div>
               <div className="flex flex-col gap-2">
                 <button className="aqua-button flex items-center justify-center px-4 py-3 rounded-lg text-white bg-blue-500 hover:bg-blue-600 text-lg">
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   Comprar Projeto Completo
                 </button>
-                <button className="glass-card border border-white/30 text-white bg-transparent px-4 py-3 rounded-lg text-lg">
-                  Solicitar Orçamento
-                </button>
+               
+               
               </div>
             </div>
           </div>
