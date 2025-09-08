@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../components/Button"; // usa o Button que arrumamos
+import Button from "../components/Button"; 
 import { Play, Download, CheckCircle, AlertCircle, Info } from "lucide-react";
+import seta from "../images/seta pra baixo.png";
 
 function Card({ children, className = "" }) {
   return (
@@ -34,182 +35,62 @@ export default function Instrucoes() {
         "Instale o substrato (cascalho ou areia específica)",
         "Adicione decorações e plantas aquáticas",
       ],
-      tempo: "30-45 minutos",
-      dificuldade: "Fácil",
     },
     {
       numero: 2,
-      titulo: "Instalação dos Sensores",
-      descricao: "Configure os sensores de monitoramento da água",
+      titulo: "Instalação do Kosatka",
+      descricao: "Instale o Submarino no seu aquário",
       detalhes: [
-        "Instale o sensor de pH na lateral do aquário",
-        "Posicione o termômetro digital no centro",
-        "Configure o sensor de oxigênio dissolvido",
-        "Conecte todos os sensores ao hub central",
+        "Preparar o aquário: Limpe e ajuste a água e a temperatura.",
+        "Posicionar o Kosatka: Coloque o dispositivo submerso de forma estável",
+        "Conectar e sincronizar: Ligue à energia e configure pelo app",
+        "Testar e ajustar: Confira os sensores e ajuste os parâmetros pelo app",
       ],
-      tempo: "20-30 minutos",
-      dificuldade: "Médio",
     },
     {
       numero: 3,
-      titulo: "Sistema de Filtragem",
-      descricao: "Monte o sistema completo de filtragem",
+      titulo: "Substâncias e Energia",
+      descricao: "Abasteça seu dispositivo",
       detalhes: [
-        "Instale o filtro externo na parte traseira",
-        "Conecte as mangueiras de entrada e saída",
-        "Adicione as mídias filtrantes (mecânica, biológica, química)",
-        "Teste o fluxo de água e ajuste a vazão",
+        "Adicionar substâncias: Coloque os reguladores de pH, acidez e nutrientes conforme indicado",
+        "Ligar e sincronizar: Conecte à energia e configure os parâmetros pelo app",
+        "Monitorar e manter: Verifique sensores regularmente e ajuste os níveis conforme necessário",
+      
       ],
-      tempo: "45-60 minutos",
-      dificuldade: "Médio",
-    },
-    {
-      numero: 4,
-      titulo: "Iluminação Inteligente",
-      descricao: "Configure o sistema de LED programável",
-      detalhes: [
-        "Monte a luminária LED sobre o aquário",
-        "Configure os horários de acendimento/apagamento",
-        "Ajuste a intensidade para plantas aquáticas",
-        "Programe o ciclo dia/noite automático",
-      ],
-      tempo: "15-25 minutos",
-      dificuldade: "Fácil",
-    },
-    {
-      numero: 5,
-      titulo: "Aquecimento e Circulação",
-      descricao: "Instale termostato e bombas de circulação",
-      detalhes: [
-        "Posicione o aquecedor próximo ao filtro",
-        "Configure a temperatura ideal (24-26°C)",
-        "Instale bombas de circulação para oxigenação",
-        "Teste todos os equipamentos de aquecimento",
-      ],
-      tempo: "25-35 minutos",
-      dificuldade: "Médio",
-    },
-    {
-      numero: 6,
-      titulo: "Configuração do App",
-      descricao: "Conecte todos os dispositivos ao aplicativo móvel",
-      detalhes: [
-        "Baixe o app AquaTech na loja de aplicativos",
-        "Crie sua conta e configure o perfil",
-        "Conecte todos os sensores via WiFi/Bluetooth",
-        "Configure alertas e notificações personalizadas",
-      ],
-      tempo: "15-20 minutos",
-      dificuldade: "Fácil",
-    },
-    {
-      numero: 7,
-      titulo: "Ciclagem do Aquário",
-      descricao: "Inicie o processo de ciclagem biológica",
-      detalhes: [
-        "Adicione água desclorada ao aquário",
-        "Introduza bactérias benéficas (starter)",
-        "Monitore os níveis de amônia e nitrito",
-        "Aguarde 2-4 semanas para estabilização completa",
-      ],
-      tempo: "2-4 semanas",
-      dificuldade: "Médio",
-    },
-    {
-      numero: 8,
-      titulo: "Introdução dos Peixes",
-      descricao: "Adicione os peixes gradualmente ao sistema",
-      detalhes: [
-        "Escolha peixes compatíveis com o tamanho do aquário",
-        "Faça a aclimatação gradual (30-60 minutos)",
-        "Introduza poucos peixes por vez",
-        "Monitore comportamento e parâmetros da água",
-      ],
-      tempo: "1-2 horas",
-      dificuldade: "Médio",
-    },
+    }
+   
+  ];
+   const parametros = [
+    { nome: "pH", valorIdeal: "6.8 - 7.2", tipo: "success" },
+    { nome: "Temperatura", valorIdeal: "24°C - 26°C", tipo: "success" },
+    { nome: "Amônia (NH3)", valorIdeal: "0 ppm", tipo: "warning" },
+    { nome: "Nitrito (NO2)", valorIdeal: "0 ppm", tipo: "warning" },
+    { nome: "Nitrato (NO3)", valorIdeal: "< 20 ppm", tipo: "info" },
+    { nome: "Dureza (GH)", valorIdeal: "8 - 12 dGH", tipo: "info" },
   ];
 
-  const dicas = [
-    {
-      tipo: "sucesso",
-      titulo: "Dica Importante",
-      texto:
-        "Sempre teste a água antes de adicionar peixes. Os parâmetros ideais são: pH 6.5-7.5, temperatura 24-26°C.",
-    },
-    {
-      tipo: "alerta",
-      titulo: "Atenção",
-      texto:
-        "Nunca adicione todos os peixes de uma vez. Introduza gradualmente para não sobrecarregar o sistema.",
-    },
-    {
-      tipo: "info",
-      titulo: "Manutenção",
-      texto:
-        "Realize trocas parciais de água (20-30%) semanalmente para manter a qualidade da água.",
-    },
-  ];
-
+  
+  
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Guia de Instalação</h1>
+    
+       <div className="text-center mb-12 bg-teal-800/55 backdrop-blur-md p-8 ">
+          <h1 className="text-4xl font-bold text-white mb-4">Instruções de uso </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto mb-6">
-            Siga este manual passo a passo para montar seu sistema AquaTech completo e ter um aquário inteligente
+            Siga este manual passo a passo para montar seu sistema Kosatka completo e ter um aquário inteligente
             funcionando perfeitamente.
           </p>
-
-          {/* Vídeo Demonstrativo */}
-          <Card className="border border-white/20 max-w-2xl mx-auto mb-8">
-            <CardContent className="p-6">
-              <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Play className="w-16 h-16 text-ocean-400 mx-auto mb-2" />
-                  <p className="text-white/80">Vídeo Demonstrativo</p>
-                  <p className="text-white/60 text-sm">
-                    Assista ao processo completo de instalação
-                  </p>
-                </div>
-              </div>
-              <Button className="w-full">
-                <Play className="w-4 h-4 mr-2" />
-                Assistir Vídeo Tutorial
-              </Button>
-            </CardContent>
-          </Card>
+            <img
+        src={seta} 
+      alt="Seta indicando"
+       className="mx-auto mt-10 h-20 w-auto animate-bounce"
+  />
         </div>
 
-        {/* Dicas Importantes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-          {dicas.map((dica, index) => (
-            <Card key={index} className="border border-white/20">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-3">
-                  {dica.tipo === "sucesso" && (
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  )}
-                  {dica.tipo === "alerta" && (
-                    <AlertCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  )}
-                  {dica.tipo === "info" && (
-                    <Info className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                  )}
-                  <div>
-                    <h3 className="text-white font-semibold text-sm mb-1">
-                      {dica.titulo}
-                    </h3>
-                    <p className="text-white/70 text-xs">{dica.texto}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        
+        
 
-        {/* Passos da Instalação */}
         <div className="space-y-6">
           {passos.map((passo) => (
             <Card
@@ -228,18 +109,7 @@ export default function Instrucoes() {
                     <p className="text-white/70">{passo.descricao}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-white/60 text-sm">Tempo: {passo.tempo}</div>
-                    <div
-                      className={`text-sm ${
-                        passo.dificuldade === "Fácil"
-                          ? "text-green-400"
-                          : passo.dificuldade === "Médio"
-                          ? "text-yellow-400"
-                          : "text-red-400"
-                      }`}
-                    >
-                      {passo.dificuldade}
-                    </div>
+                    
                   </div>
                 </div>
               </CardHeader>
@@ -255,26 +125,59 @@ export default function Instrucoes() {
                     </li>
                   ))}
                 </ul>
-              </CardContent>
+              </CardContent>  
             </Card>
           ))}
         </div>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mt-10 mb-8">Parâmetros Ideais da Água</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {parametros.map((parametro, index) => (
+              <Card key={index} className="glass-card border-white/20">
+                <CardContent className="p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-semibold">{parametro.nome}</h3>
+                      <p className="text-white/80 text-sm">{parametro.valorIdeal}</p>
+                    </div>
+                    <div
+                      className={`w-3 h-3 rounded-full ${
+                        parametro.tipo === "success"
+                          ? "bg-green-400"
+                          : parametro.tipo === "warning"
+                            ? "bg-yellow-400"
+                            : "bg-blue-400"
+                      }`}
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
 
-        {/* Download do Manual */}
-        <Card className="border border-white/20 mt-12">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-white text-xl font-semibold mb-2">
-              Manual Completo em PDF
-            </h3>
-            <p className="text-white/70 mb-4">
-              Baixe o manual completo com ilustrações detalhadas e troubleshooting
-            </p>
-            <Button>
-              <Download className="w-4 h-4 mr-2" />
-              Baixar Manual PDF
-            </Button>
-          </CardContent>
-        </Card>
+            
+
+
+       <Card className="border border-white/20 max-w-2xl mx-auto mb-8 mt-12">
+            <CardContent className="p-6">
+              <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <Play className="w-16 h-16 text-ocean-400 mx-auto mb-2" />
+                  <p className="text-white/80">Vídeo Demonstrativo</p>
+                  <p className="text-white/60 text-sm">
+                    Assista ao processo completo de instalação
+                  </p>
+                </div>
+              </div>
+              <Button className="w-full">
+                <Play className="w-4 h-4 mr-2" />
+                Assistir Vídeo Tutorial
+              </Button>
+              
+            </CardContent>
+          </Card>
+          <p className="text-center text-white max-w-lg mx-auto" >Assista ao vídeo e conheça como nosso sistema monitora e cuida do aquário de forma prática, eficiente e automática.</p>
       </div>
     </div>
   );

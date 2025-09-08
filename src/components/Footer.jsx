@@ -13,7 +13,7 @@ export function Footer() {
               <span className="font-bold text-lg text-white">Kosatka</span>
             </div>
             <p className="text-white/80 text-sm">
-              Revolucionando a aquariofilia com tecnologia inteligente e soluções inovadoras.
+              Inovação que conecta tecnologia e sustentabilidade, cuidando de cada gota
             </p>
           </div>
 
@@ -64,22 +64,22 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-white/80">
                 <Mail className="h-4 w-4" />
-                <span>contato@aquatech.com</span>
+                <span>kosatka671@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
                 <Phone className="h-4 w-4" />
-                <span>(11) 99999-9999</span>
+                <span>(11) 95973-9398</span>
               </div>
               <div className="flex items-center gap-2 text-white/80">
                 <Github className="h-4 w-4" />
-                <span>github.com/aquatech</span>
+                <span>github.com/Kosatka</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-white/60 text-sm">© 2024 AquaTech. Todos os direitos reservados.</p>
+          <p className="text-white/60 text-sm">© 2025 KOSATKA. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
