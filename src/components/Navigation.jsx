@@ -76,16 +76,7 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex flex-col gap-2 mt-2">
-              <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="outline" className="w-full glass-card border-primary/30 bg-transparent">
-                  Login
-                </Button>
-              </Link>
-              <Link to="/cadastro" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full aqua-button">Cadastrar</Button>
-              </Link>
-            </div>
+        
           </nav>
         </div>
       )}

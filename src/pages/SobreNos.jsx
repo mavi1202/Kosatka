@@ -1,39 +1,38 @@
-import { Github, InstagramIcon, Mail, Phone, MapPin, Send } from "lucide-react"
+import { Github, InstagramIcon, Mail, Phone, MapPin, Send,Linkedin } from "lucide-react"
+import imgmaria from "../images/maria.png";
+import imglav from "../images/lavinia.png";
+import imgporsi from "../images/porsi.png";
+import imgjulia from "../images/julia.png";
+
+
 
 export default function SobreNos() {
   const membros = [
     {
-      nome: "Maria Vitótia Barreto",
-      cargo: "Desenvolvedora Full Stack",
-      foto: "/placeholder.svg?height=300&width=300&text=Ana+Silva",
-      bio: "Especialista em React e Node.js com 5 anos de experiência em desenvolvimento web. Apaixonada por tecnologia e aquariofilia.",
+      nome: "Maria Vitória Barreto",
+    
       github: "https://github.com/mavi1202",
       linkedin: "https://www.linkedin.com/in/mariavitoriabq/",
       email: "mariavitoriabarreto2@gmail.com",
     },
     {
       nome: "Lavínia Reis",
-      cargo: "Engenheiro de Hardware",
-      foto: "/placeholder.svg?height=300&width=300&text=Carlos+Santos",
-      bio: "Engenheiro eletrônico especializado em IoT e sistemas embarcados. Responsável pelo desenvolvimento dos sensores inteligentes.",
+    
       github: "https://github.com/23lavi",
       linkedin: "https://www.linkedin.com/in/lav%C3%ADnia-reis-508b59338/",
       email: "laviniareis@eaportal.org",
     },
     {
       nome: "Gabriel Porsi",
-      cargo: "Designer UX/UI",
-      foto: "/placeholder.svg?height=300&width=300&text=Maria+Oliveira",
-      bio: "Designer com foco em experiência do usuário e interfaces intuitivas. Criou toda a identidade visual do projeto AquaTech.",
       github: "https://github.com/porsii800",
       linkedin: "https://www.linkedin.com/in/gabriel-porsi-pinheiro-aa9403338/",
       email: "gabrielporsi@eaportal.org",
     },
     {
       nome: "Julia Mariana Afonso",
-      cargo: "Especialista em Aquariofilia",
-      foto: "/placeholder.svg?height=300&width=300&text=João+Costa",
-      bio: "Biólogo marinho com 15 anos de experiência em aquariofilia. Consultor técnico para parâmetros ideais de água e peixes.",
+      cargo: "",
+      foto: "",
+      bio: "",
       github: "https://github.com/juliaferraz12",
       linkedin: "https://www.linkedin.com/in/julia-mariana-ab3100339/",
       email: "juliamarianaafonsof@gmail.com",
@@ -73,7 +72,7 @@ export default function SobreNos() {
                 </p>
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <img
                   src="/placeholder.svg?height=400&width=600&text=Equipe+AquaTech"
                   alt="Equipe Kosatka"
                   width={600}
@@ -86,29 +85,7 @@ export default function SobreNos() {
         </div>
 
    
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {[
-            {
-              titulo: "Missão",
-              texto:
-                "Democratizar a aquariofilia através de tecnologia inteligente, tornando o cuidado com aquários mais simples, eficiente e acessível para todos.",
-            },
-            {
-              titulo: "Visão",
-              texto:
-                "Ser a principal referência em soluções tecnológicas para aquariofilia, promovendo a sustentabilidade e o bem-estar aquático.",
-            },
-            {
-              titulo: "Valores",
-              texto:
-                "Inovação, sustentabilidade, qualidade, transparência e paixão pela vida aquática guiam todas as nossas decisões e desenvolvimentos.",
-            },
-          ].map((item, i) => (
-            <div key={i} className="rounded-xl bg-white/10 border border-white/20 p-6 shadow-md text-center">
-              <h3 className="text-white text-xl mb-2">{item.titulo}</h3>
-              <p className="text-white/80">{item.texto}</p>
-            </div>
-          ))}
+        
         </div>
 
        
@@ -121,8 +98,8 @@ export default function SobreNos() {
                 className="rounded-xl bg-white/10 border border-white/20 p-6 shadow-md text-center hover:border-white/40 transition-all duration-300 group"
               >
                 <div className="relative mb-4">
-                  <Image
-                    src={membro.foto || "/placeholder.svg"}
+                  <img
+                    src={membro.foto || ""}
                     alt={membro.nome}
                     width={300}
                     height={300}
@@ -257,6 +234,6 @@ export default function SobreNos() {
           </div>
         </div>
       </div>
-    </div>
+    
   )
 }

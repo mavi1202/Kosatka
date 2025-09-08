@@ -1,5 +1,5 @@
 import * as React from "react"
-import { cn } from "../utils/cn" // ajuste o caminho conforme sua pasta utils
+import { cn } from "../utils/cn" 
 
 const Label = React.forwardRef(({ className, ...props }, ref) => (
   <label
