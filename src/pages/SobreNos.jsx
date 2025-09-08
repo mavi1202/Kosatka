@@ -1,9 +1,9 @@
-import { Github, Linkedin, Mail, Phone, MapPin, Send } from "lucide-react"
+import { Github, InstagramIcon, Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function SobreNos() {
   const membros = [
     {
-      nome: "Ana Silva",
+      nome: "Maria Vitótia Brreto",
       cargo: "Desenvolvedora Full Stack",
       foto: "/placeholder.svg?height=300&width=300&text=Ana+Silva",
       bio: "Especialista em React e Node.js com 5 anos de experiência em desenvolvimento web. Apaixonada por tecnologia e aquariofilia.",
@@ -12,7 +12,7 @@ export default function SobreNos() {
       email: "ana@aquatech.com",
     },
     {
-      nome: "Carlos Santos",
+      nome: "Lavínia Reis",
       cargo: "Engenheiro de Hardware",
       foto: "/placeholder.svg?height=300&width=300&text=Carlos+Santos",
       bio: "Engenheiro eletrônico especializado em IoT e sistemas embarcados. Responsável pelo desenvolvimento dos sensores inteligentes.",
@@ -21,7 +21,7 @@ export default function SobreNos() {
       email: "carlos@aquatech.com",
     },
     {
-      nome: "Maria Oliveira",
+      nome: "Gabriel Porsi",
       cargo: "Designer UX/UI",
       foto: "/placeholder.svg?height=300&width=300&text=Maria+Oliveira",
       bio: "Designer com foco em experiência do usuário e interfaces intuitivas. Criou toda a identidade visual do projeto AquaTech.",
@@ -30,7 +30,7 @@ export default function SobreNos() {
       email: "maria@aquatech.com",
     },
     {
-      nome: "João Costa",
+      nome: "Julia Mariana Afonso",
       cargo: "Especialista em Aquariofilia",
       foto: "/placeholder.svg?height=300&width=300&text=João+Costa",
       bio: "Biólogo marinho com 15 anos de experiência em aquariofilia. Consultor técnico para parâmetros ideais de água e peixes.",
@@ -43,7 +43,7 @@ export default function SobreNos() {
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
+     
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">Quem Somos</h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto">
@@ -52,15 +52,14 @@ export default function SobreNos() {
           </p>
         </div>
 
-        {/* Nossa História */}
         <div className="rounded-xl bg-white/10 border border-white/20 shadow-md mb-16">
           <div className="p-8">
             <h2 className="text-white text-2xl text-center mb-6">Nossa História</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
                 <p className="text-white/80">
-                  O projeto AquaTech nasceu em 2023 durante nossos estudos de Tecnologia da Informação, quando
-                  percebemos as dificuldades que muitos aquaristas enfrentam para manter seus aquários em condições
+                  O projeto Kosatka nasceu em 2025 durante uma coversa entre o grupo , quando
+                  perceberam as dificuldades que muitos aquaristas enfrentam para manter seus aquários em condições
                   ideais.
                 </p>
                 <p className="text-white/80">
@@ -69,14 +68,14 @@ export default function SobreNos() {
                   prazeroso para todos.
                 </p>
                 <p className="text-white/80">
-                  Hoje, o AquaTech representa não apenas um projeto acadêmico, mas uma visão de futuro onde a tecnologia
+                  Hoje, o Kosatka representa não apenas um projeto acadêmico, mas uma visão de futuro onde a tecnologia
                   e a natureza trabalham em harmonia perfeita.
                 </p>
               </div>
               <div className="rounded-xl overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=400&width=600&text=Equipe+AquaTech"
-                  alt="Equipe AquaTech"
+                  alt="Equipe Kosatka"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
@@ -86,7 +85,7 @@ export default function SobreNos() {
           </div>
         </div>
 
-        {/* Missão, Visão e Valores */}
+   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {[
             {

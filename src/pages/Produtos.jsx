@@ -73,7 +73,7 @@ export default function Produtos() {
     },
   ]
 
-  const categorias = ["Todos", "Sensores", "Aquecimento", "Filtragem", "Iluminação", "Circulação", "Testes"]
+
   const valorTotal = produtos.reduce((total, produto) => total + produto.preco, 0)
 
   return (

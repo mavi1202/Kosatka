@@ -37,14 +37,14 @@ export default function Referencias() {
           titulo: "AUTOMAÇÃO E MONITORAMENTO SilvaEM AQUÁRIOS UTILIZANDO ARDUÍNO",
           autores: "Pedro Henrique Arantes de Souza1Marlon Hugo Rodrigues da Silva Ricardo Bernardes de Mello Fabricio Pelloso Piurscosky Wariston Fernando Pereira ",
           ano: "2006",
-          link: "file:///C:/Users/maria/Downloads/admin,+AUTOMA%C3%87%C3%83O+E+MONITORAMENTO+EM+AQU%C3%81RIOS+UTILIZANDO+ARDU%C3%8DNO.pdf",
+          link: "https://periodicos.unis.edu.br/interacao/article/view/144",
           resumo: "Foca na criação de um sistema automatizado baseado em Arduino para monitorar temperatura, luminosidade e nível da água em aquários. A solução oferece baixo custo e facilidade de uso para quem deseja automatizar o cuidado com peixes e plantas aquáticas.",
         },
         {
           titulo: "SISTEMA DE MONITORAMENTO E CONTROLE DE TEMPERATURA DA ÁGUA DE UM AQUÁRIO",
           autores: "	Oliveira Junior, Aguinaldo José Rodrigues deOliveira, Eduardo Henrique Hurla deMarques, Lucas Damazio ",
           ano: "2019",
-          link: "PG_DAELE_2019_2_03.pdf",
+          link: "https://repositorio.utfpr.edu.br/jspui/handle/1/16956",
           resumo: "O estudo desenvolve um sistema para medir e controlar a temperatura da água em aquários usando sensores e microcontroladores. A proposta visa manter condições ideais para os organismos, evitando variações que possam comprometer sua saúde.",
         }
         

@@ -67,7 +67,7 @@ export default function Instrucoes() {
     { nome: "Amônia (NH3)", valorIdeal: "0 ppm", tipo: "warning" },
     { nome: "Nitrito (NO2)", valorIdeal: "0 ppm", tipo: "warning" },
     { nome: "Nitrato (NO3)", valorIdeal: "< 20 ppm", tipo: "info" },
-    { nome: "Dureza (GH)", valorIdeal: "8 - 12 dGH", tipo: "info" },
+    { nome: "Dureza(Turbidez) (GH)", valorIdeal: "8 - 12 dGH", tipo: "info" },
   ];
 
   

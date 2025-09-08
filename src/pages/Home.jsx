@@ -113,24 +113,20 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
               },
              
             ].map((feature, index) => (
-              <Card
-                key={index}
-                className="glass-card border-white/20 hover:border-white/40 transition-all duration-300 group"
-              >
+              
                 <CardContent className="flex flex-col items-center space-y-2 p-6 text-center">
-                  <div className="rounded-full bg-primary/20 p-3 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="  p-3 text-primary group-hover:bg-primary transition-all duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                   <p className="text-white/80">{feature.description}</p>
                 </CardContent>
-              </Card>
+             
             ))}
           </div>
         </div>
       </section>
 
-      {/* Target Audience */}
       <section className="w-full py-12 md:py-24 lg:py-32 relative">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
