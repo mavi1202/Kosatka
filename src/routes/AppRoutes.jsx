@@ -1,6 +1,6 @@
 // src/AppRoutes.jsx
 import { Routes, Route } from "react-router-dom";
-import  ThemeContext  from "../context/ThemeContext";
+
 import Layout from "../components/Layout"; 
 import Home from "../pages/Home";
 import Jogo from "../pages/Jogo";

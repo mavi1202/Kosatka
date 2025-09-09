@@ -13,8 +13,7 @@ export default function Produtos() {
     {
       id: 1,
       nome: "Sensor de pH Digital",
-      preco: 99.9,
-      
+      preco: 199.9,
       imagem: ph,
       categoria: "Sensores",
       avaliacao: 4.8,
@@ -24,7 +23,7 @@ export default function Produtos() {
     {
       id: 2,
       nome: "Sensor de Temperatura",
-      preco: 99,
+      preco: 19,
       imagem: temp,
       categoria: "Sensores",
       avaliacao: 4.9,
@@ -34,8 +33,9 @@ export default function Produtos() {
     {
       id: 3,
       nome: "Sensor de Turbidez",
-      preco: 99.9,
+      preco: 104.12,
       imagem: turb,
+      link:"https://www.eletrogate.com/sensor-de-ph-arduino-modulo-de-leitura?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&srsltid=AfmBOorqqGXsPcQAiI-d44rbiteD7cgTmZmGBzG8OYaBMZGuVt-SYk-XnmQ",
       categoria: "Sensores",
       avaliacao: 4,
       descricao: "Sistema completo de turbidez para aquários até 200L.",
@@ -43,18 +43,18 @@ export default function Produtos() {
     },
     {
       id: 4,
-      nome: "LED´S",
+      nome: "LEDs",
       preco: 9.99,
       imagem: leds,
-      categoria: "leds",
+      categoria: "Leds",
       avaliacao: 4.6,
-      descricao: "Leds simles",
-      especificacoes: ["Tensão de alimentação: 3.2 ~3.8V", "Luminosidade: 20.000 MCD","Corrente máxima: 25mA"],
+      descricao: "Leds simples",
+      especificacoes: ["Tensão: 3.2 ~3.8V", "Luminosidade: 20.000 MCD","Corrente máxima: 25mA"],
     },
     {
       id: 5,
       nome: "Filamento",
-      preco: 78.9,
+      preco: 90.42,
       imagem: fil,
       categoria: "Impressão 3D",
       avaliacao: 4.5,
@@ -64,173 +64,184 @@ export default function Produtos() {
     {
       id: 6,
       nome: "ESP 32",
-      preco: 45.9,
+      preco: 47.9,
       imagem: esp,
       categoria: "Esp32",
       avaliacao: 5,
-      descricao: "Microcontrolador System on a Chip (SoC) de baixo custo e baixo consumo da Espressif Systems, conhecido por integrar Wi-Fi.",
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
       especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
     },
-  ]
+  ];
 
-
-  const valorTotal = produtos.reduce((total, produto) => total + produto.preco, 0)
+  const valorTotal = produtos.reduce((total, produto) => total + produto.preco, 0);
 
   return (
-
     <div
-          className="page-background"
-          style={{
-            backgroundImage: `url(${pagprodutos})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center ",
-            backgroundRepeat: "no-repeat",
-          }}>
-    <div className="min-h-screen py-12">
-      <div className="container mx-auto px-4">
-   <div className="text-center  mb-12 bg-[#126895]/20 backdrop--md p-8 ">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-white  mb-8">Materiais do projeto, em detalhes.</h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Nesta página, você confere os componentes usados no desenvolvimento do sistema de monitoramento, junto com seus respectivos valores.
-          </p>
-          <img
-                  src={seta} 
+      className="page-background"
+      style={{
+        backgroundImage: `url(${pagprodutos})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="min-h-screen py-12">
+        <div className="container mx-auto px-4">
+        
+          <div className="text-center mb-12 bg-card/80 backdrop-blur-md p-8 rounded-xl border border-border">
+            <div className="text-center mb-10">
+              <h1 className="text-4xl font-bold text-foreground mb-8">
+                Materiais do projeto, em detalhes.
+              </h1>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Nesta página, você confere os componentes usados no desenvolvimento do sistema de monitoramento, junto com seus respectivos valores.
+              </p>
+              <img
+                src={seta}
                 alt="Seta indicando"
-                 className="mx-auto mt-10 h-20 w-auto animate-bounce"
-            />
-        </div>
-</div>
-     
+                className="mx-auto mt-10 h-20 w-auto animate-bounce"
+              />
+            </div>
+          </div>
 
-   
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {produtos.map((produto) => (
-            <div
-              key={produto.id}
-              className="glass-card border border-white/20 hover:border-white/40 transition-all duration-300 group rounded-lg overflow-hidden"
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={produto.imagem}
-                  alt={produto.nome}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {produto.precoOriginal > produto.preco && (
-                  <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
-                    -{Math.round(((produto.precoOriginal - produto.preco) / produto.precoOriginal) * 100)}%
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {produtos.map((produto) => (
+              <div
+                key={produto.id}
+                className="glass-card border border-border hover:border-primary/50 transition-all duration-300 group rounded-lg overflow-hidden"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={produto.imagem}
+                    alt={produto.nome}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-2 left-2 bg-primary/80 text-primary-foreground px-2 py-1 rounded text-sm">
+                    {produto.categoria}
                   </div>
-                )}
-                <div className="absolute top-2 left-2 bg-primary/80 text-white px-2 py-1 rounded text-sm">
-                  {produto.categoria}
+                </div>
+
+                <div className="p-4">
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-4 h-4 ${
+                          i < Math.floor(produto.avaliacao)
+                            ? "text-yellow-400 fill-current"
+                            : "text-muted-foreground"
+                        }`}
+                      />
+                    ))}
+                    <span className="text-muted-foreground text-sm ml-1">
+                      ({produto.avaliacao})
+                    </span>
+                  </div>
+
+                  <h3 className="text-foreground text-lg font-semibold mb-2">
+                    {produto.nome}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
+                    {produto.descricao}
+                  </p>
+
+                  <div className="space-y-1 mb-3">
+                    {produto.especificacoes.slice(0, 2).map((spec, index) => (
+                      <div key={index} className="text-muted-foreground text-xs">
+                        • {spec}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-col">
+                      <span className="text-2xl font-bold text-primary">
+                        R$ {produto.preco.toFixed(2)}
+                      </span>
+                    </div>
+                    
+                   <a href="" 
+           target="_blank" 
+           rel="noopener noreferrer"
+          
+           > 
+
+                    <button className="aqua-button flex items-center px-3 py-2 rounded-lg text-white text-sm">
+                      <ShoppingCart className="w-4 h-4 mr-1" />
+                      Comprar
+                    </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+         
+          <div className="glass-card border border-border max-w-4xl mx-auto rounded-lg overflow-hidden">
+            <div className="p-6 border-b border-border text-center">
+              <h2 className="text-foreground text-2xl font-bold mb-2">
+                Kosatka : Projeto Completo
+              </h2>
+              <p className="text-muted-foreground">
+                Sistema completo de aquário inteligente com todos os equipamentos necessários
+              </p>
+            </div>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-4">
+                  <h3 className="text-foreground font-semibold text-lg">Características do Sistema:</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Thermometer className="w-4 h-4 text-primary" />
+                      <span>Controle automático de temperatura</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Droplets className="w-4 h-4 text-primary" />
+                      <span>Monitoramento de qualidade da água</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Lightbulb className="w-4 h-4 text-primary" />
+                      <span>Turbidez</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Filter className="w-4 h-4 text-primary" />
+                      <span>Controle via ESP32</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-foreground font-semibold text-lg">Especificações Técnicas:</h3>
+                  <div className="space-y-2 text-muted-foreground text-sm">
+                    <div>• Capacidade: Aquários até 200L</div>
+                    <div>• Conectividade: WiFi + Bluetooth</div>
+                    <div>• Controle: App móvel completo</div>
+                    <div>• Monitoramento: 24/7 automático</div>
+                    <div>• Garantia: 2 anos em todos os produtos</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-4">
-                <div className="flex items-center gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-4 h-4 ${
-                        i < Math.floor(produto.avaliacao) ? "text-yellow-400 fill-current" : "text-gray-400"
-                      }`}
-                    />
-                  ))}
-                  <span className="text-white/80 text-sm ml-1">({produto.avaliacao})</span>
-                </div>
-
-                <h3 className="text-white text-lg font-semibold mb-2">{produto.nome}</h3>
-                <p className="text-white/70 text-sm mb-3 line-clamp-2">{produto.descricao}</p>
-
-                <div className="space-y-1 mb-3">
-                  {produto.especificacoes.slice(0, 2).map((spec, index) => (
-                    <div key={index} className="text-white/60 text-xs">
-                      • {spec}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold text-primary">R$ {produto.preco.toFixed(2)}</span>
-                    {produto.precoOriginal > produto.preco && (
-                      <span className="text-white/50 text-sm line-through">R$ {produto.precoOriginal.toFixed(2)}</span>
-                    )}
+              <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="text-center md:text-left">
+                  <div className="text-muted-foreground text-sm">Valor total do projeto:</div>
+                  <div className="text-3xl font-bold text-primary">
+                    R$ {valorTotal.toFixed(2)}
                   </div>
-                  <button className="aqua-button flex items-center px-3 py-2 rounded-lg text-white bg-blue-500 hover:bg-blue-600 text-sm">
-                    <ShoppingCart className="w-4 h-4 mr-1" />
-                    Comprar
+                </div>
+                <div className="flex flex-col gap-2">
+                  <button className="aqua-button flex items-center justify-center px-4 py-3 rounded-lg text-white text-lg">
+                    <ShoppingCart className="w-5 h-5 mr-2" />
+                    Comprar Projeto Completo
                   </button>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-      
-        <div className="glass-card border border-white/20 max-w-4xl mx-auto rounded-lg overflow-hidden">
-          <div className="p-6 border-b border-white/20 text-center">
-            <h2 className="text-white text-2xl font-bold mb-2">Kosatka : Projeto Completo</h2>
-            <p className="text-white/80">
-              Sistema completo de aquário inteligente com todos os equipamentos necessários
-            </p>
-          </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="space-y-4">
-                <h3 className="text-white font-semibold text-lg">Características do Sistema:</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Thermometer className="w-4 h-4 text-primary" />
-                    <span>Controle automático de temperatura</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Droplets className="w-4 h-4 text-primary" />
-                    <span>Monitoramento de qualidade da água</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Lightbulb className="w-4 h-4 text-primary" />
-                    <span>Turbidez</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-white/80">
-                    <Filter className="w-4 h-4 text-primary" />
-                    <span>Esp32 controlação</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-white font-semibold text-lg">Especificações Técnicas:</h3>
-                <div className="space-y-2 text-white/80 text-sm">
-                  <div>• Capacidade: Aquários até 200L</div>
-                  <div>• Conectividade: WiFi + Bluetooth</div>
-                  <div>• Controle: App móvel completo</div>
-                  <div>• Monitoramento: 24/7 automático</div>
-                  <div>• Garantia: 2 anos todos os produtos</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-center md:text-left">
-                <div className="text-white/80 text-sm">Valor total do projeto:</div>
-                <div className="text-3xl font-bold text-primary">R$ {valorTotal.toFixed(2)}</div>
-           
-              </div>
-              <div className="flex flex-col gap-2">
-                <button className="aqua-button flex items-center justify-center px-4 py-3 rounded-lg text-white bg-blue-500 hover:bg-blue-600 text-lg">
-                  <ShoppingCart className="w-5 h-5 mr-2" />
-                  Comprar Projeto Completo
-                </button>
-               
-               
-              </div>
-            </div>
           </div>
         </div>
-      </div>
+      </div>  
     </div>
-    </div>
-  
-  )
+  );
 }

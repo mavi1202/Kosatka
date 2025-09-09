@@ -3,7 +3,6 @@ import Button from "../components/Button";
 import { Play, Download, CheckCircle, AlertCircle, Info } from "lucide-react";
 import seta from "../images/seta pra baixo.png";
 import instrucoesesc from "../images/background_instrucoes_escuro.png";
-import { useTheme } from "../context/ThemeContext";
 
 function Card({ children, className = "" }) {
   return (

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
-export default function ThemeChange() {
+export default function ThemeProvider({ children }) {
+  
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {

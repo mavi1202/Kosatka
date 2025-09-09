@@ -7,6 +7,8 @@ import { cn } from "../lib/utils"
 import logoClaro from "../images/logo-claro.png";
 import logoescuro from "../images/logo-escuro.png";
 
+
+
 const navItems = [
   { name: "Início", href: "/" },
   { name: "Instruções", href: "/instrucoes" },
@@ -17,13 +19,14 @@ const navItems = [
 ]
 
 export function Navigation() {
+  
   const location = useLocation()
   const pathname = location.pathname
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full glass-card">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 ">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary">
            <img src={logoClaro} alt="Logo" className="h-10 w-10 object-contain" />
