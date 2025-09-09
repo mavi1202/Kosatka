@@ -4,7 +4,6 @@ import { Moon, Sun } from "lucide-react";
 export default function ThemeChange() {
   const [theme, setTheme] = useState("light");
 
-  // Inicializa o tema
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);

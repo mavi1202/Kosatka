@@ -20,7 +20,7 @@ export default function Home() {
   style={{
     backgroundImage: `url(${Background_home})`,
     backgroundSize: "cover",
-    backgroundPosition: "center ",
+    backgroundPosition: "center 140%",
     backgroundRepeat: "no-repeat",
   }}
 >
@@ -155,9 +155,9 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
     
         <div className=" mt - 9 flex-shrink-0 w-45 h- flex items-center justify-center transition-all duration-300 group-hover:scale-110">
           <img
-            src={audience.image}
+            src={Botaoaquaristas}
             alt={audience.title}
-            className="w-25 h-25 object-contain"
+            className="w-25 h-25 object-contain mt-5"
           />
         </div>
 

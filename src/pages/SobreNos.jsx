@@ -6,6 +6,7 @@ import imgjulia from "../images/julia.png";
 import imggrupo from "../images/kosatka.jpeg";
 import bgsob from "../images/background_sobrenos_escuro.png";
 import logo from "../images/logo-claro.png";
+import { useTheme } from "../context/ThemeContext";
 
 
 

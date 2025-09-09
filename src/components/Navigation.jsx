@@ -5,6 +5,7 @@ import { ModeToggle } from "./ModeTogglee"
 import { Menu, X, Fish } from "lucide-react"
 import { cn } from "../lib/utils"
 import logoClaro from "../images/logo-claro.png";
+import logoescuro from "../images/logo-escuro.png";
 
 const navItems = [
   { name: "Início", href: "/" },
