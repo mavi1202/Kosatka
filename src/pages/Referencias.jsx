@@ -34,7 +34,7 @@ export default function Referencias() {
           resumo: "O artigo propõe um sistema automatizado para controlar a alimentação e as condições ambientais de tanques de piscicultura. O objetivo é aumentar a eficiência da produção e garantir o bem-estar dos peixes, utilizando sensores e controladores eletrônicos.",
         },
         {
-          titulo: "AUTOMAÇÃO E MONITORAMENTO SilvaEM AQUÁRIOS UTILIZANDO ARDUÍNO",
+          titulo: "AUTOMAÇÃO E MONITORAMENTO EM AQUÁRIOS UTILIZANDO ARDUÍNO",
           autores: "Pedro Henrique Arantes de Souza1Marlon Hugo Rodrigues da Silva Ricardo Bernardes de Mello Fabricio Pelloso Piurscosky Wariston Fernando Pereira ",
           ano: "2006",
           link: "https://periodicos.unis.edu.br/interacao/article/view/144",

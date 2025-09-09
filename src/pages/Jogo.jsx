@@ -53,7 +53,7 @@ export default function Jogo() {
             <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
               <img
                 src="/placeholder.svg?height=360&width=640&text=Demo+do+Jogo"
-                alt="Demo do Jogo AquaTech"
+                alt="Demo do Jogo Kosatka"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/40">

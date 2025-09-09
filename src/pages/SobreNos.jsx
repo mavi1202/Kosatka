@@ -3,6 +3,9 @@ import imgmaria from "../images/maria.png";
 import imglav from "../images/lavinia.png";
 import imgporsi from "../images/porsi.png";
 import imgjulia from "../images/julia.png";
+import imggrupo from "../images/kosatka.jpeg";
+import bgsob from "../images/background_sobrenos_escuro.png";
+import logo from "../images/logo-claro.png";
 
 
 
@@ -10,29 +13,28 @@ export default function SobreNos() {
   const membros = [
     {
       nome: "Maria Vitória Barreto",
-    
+      foto:imgmaria,   
       github: "https://github.com/mavi1202",
       linkedin: "https://www.linkedin.com/in/mariavitoriabq/",
       email: "mariavitoriabarreto2@gmail.com",
     },
     {
       nome: "Lavínia Reis",
-    
+      foto:imglav,    
       github: "https://github.com/23lavi",
       linkedin: "https://www.linkedin.com/in/lav%C3%ADnia-reis-508b59338/",
       email: "laviniareis@eaportal.org",
     },
     {
       nome: "Gabriel Porsi",
+      foto: imgporsi,
       github: "https://github.com/porsii800",
       linkedin: "https://www.linkedin.com/in/gabriel-porsi-pinheiro-aa9403338/",
       email: "gabrielporsi@eaportal.org",
     },
     {
       nome: "Julia Mariana Afonso",
-      cargo: "",
-      foto: "",
-      bio: "",
+      foto: imgjulia,
       github: "https://github.com/juliaferraz12",
       linkedin: "https://www.linkedin.com/in/julia-mariana-ab3100339/",
       email: "juliamarianaafonsof@gmail.com",
@@ -40,14 +42,23 @@ export default function SobreNos() {
   ]
 
   return (
+
+    <div
+          className="page-background"
+          style={{
+            backgroundImage: `url(${bgsob})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center ",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
      
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-4">Quem Somos</h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto">
-            Somos uma equipe apaixonada por tecnologia e aquariofilia, unidos pelo objetivo de revolucionar a forma como
-            as pessoas cuidam de seus aquários através da inovação e automação inteligente.
+            Somos um grupo de estudantes apaixonados por tecnologia, inovação e meio ambiente. Nosso projeto nasceu com o propósito de facilitar o cuidado com aquários por meio de um dispositivo inteligente, acessível e eficiente.
           </p>
         </div>
 
@@ -73,7 +84,7 @@ export default function SobreNos() {
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600&text=Equipe+AquaTech"
+                  src={imggrupo}
                   alt="Equipe Kosatka"
                   width={600}
                   height={400}
@@ -99,7 +110,7 @@ export default function SobreNos() {
               >
                 <div className="relative mb-4">
                   <img
-                    src={membro.foto || ""}
+                    src={membro.foto || "imggrupo"}
                     alt={membro.nome}
                     width={300}
                     height={300}
@@ -107,8 +118,6 @@ export default function SobreNos() {
                   />
                 </div>
                 <h3 className="text-white font-semibold text-lg mb-1">{membro.nome}</h3>
-                <p className="text-blue-400 text-sm mb-3">{membro.cargo}</p>
-                <p className="text-white/70 text-sm mb-4">{membro.bio}</p>
 
                 <div className="flex justify-center gap-2">
                   <a href={membro.github} target="_blank" className="p-2 rounded-full hover:bg-blue-500/20">
@@ -127,113 +136,20 @@ export default function SobreNos() {
         </div>
 
         <div className="rounded-xl bg-white/10 border border-white/20 shadow-md max-w-4xl mx-auto p-8">
-          <h2 className="text-white text-2xl text-center mb-2">Entre em Contato</h2>
+          <h2 className="text-white text-2xl text-center mb-2">Fale com a gente!</h2>
           <p className="text-white/80 text-center mb-8">
-            Tem alguma dúvida ou sugestão? Adoraríamos ouvir de você!
+            Tem dúvidas, sugestões ou quer saber mais sobre o nosso projeto? 
+            <p>Entre em contato pelo e-mail: kosatka671@gmail.com</p>
+            <p>Vamos adorar conversar com você!</p>
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <img className="mx-auto w-25 h-20 animate-bounce"
+          src={logo} alt="logo" />
           
-            <div className="space-y-6">
-              <h3 className="text-white font-semibold text-lg">Informações de Contato</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <div>
-                    <p className="text-white font-medium">E-mail</p>
-                    <p className="text-white/70">Kosatka671@hmail.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                  <div>
-                    <p className="text-white font-medium">Telefone</p>
-                    <p className="text-white/70">(11) 95973-9398</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-blue-400" />
-                  <div>
-                    <p className="text-white font-medium">Endereço</p>
-                    <p className="text-white/70">São Paulo, SP - Brasil</p>
-                  </div>
-                </div>
-              </div>
-              <div className="pt-4">
-                <h4 className="text-white font-medium mb-2">Redes Sociais</h4>
-                <div className="flex gap-2">
-                  <a href="https://github.com" target="_blank" className="p-2 rounded-full hover:bg-blue-500/20">
-                    <Github className="w-5 h-5 text-white/70 hover:text-blue-400" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" className="p-2 rounded-full hover:bg-blue-500/20">
-                    <Linkedin className="w-5 h-5 text-white/70 hover:text-blue-400" />
-                  </a>
-                  <a href="mailto:kosatka671@gmail.com" className="p-2 rounded-full hover:bg-blue-500/20">
-                    <Mail className="w-5 h-5 text-white/70 hover:text-blue-400" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="nome" className="text-white">
-                    Nome
-                  </label>
-                  <input
-                    id="nome"
-                    placeholder="Seu nome"
-                    className="w-full px-3 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-white">
-                    E-mail
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="seu@email.com"
-                    className="w-full px-3 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="assunto" className="text-white">
-                  Assunto
-                </label>
-                <input
-                  id="assunto"
-                  placeholder="Assunto da mensagem"
-                  className="w-full px-3 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="mensagem" className="text-white">
-                  Mensagem
-                </label>
-                <textarea
-                  id="mensagem"
-                  rows={4}
-                  placeholder="Sua mensagem..."
-                  className="w-full px-3 py-2 rounded-md border border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-medium flex items-center justify-center"
-              >
-                <Send className="w-4 h-4 mr-2" />
-                Enviar Mensagem
-              </button>
-            </form>
+          
           </div>
         </div>
-      </div>
+        </div>
+      
     
   )
 }

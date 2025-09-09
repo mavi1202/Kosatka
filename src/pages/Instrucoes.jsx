@@ -87,7 +87,7 @@ export default function Instrucoes() {
       <div className="container mx-auto px-4">
     
        <div className="text-center mb-12 bg-[#00556B]/50 backdrop-md p-8 ">
-          <h1 className="text-4xl font-bold text-white mb-4">Instruções de uso </h1>
+          <h1 className="text-4xl font-bold text-black mb-4">Instruções de uso </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto mb-6">
             Siga este manual passo a passo para montar seu sistema Kosatka completo e ter um aquário inteligente
             funcionando perfeitamente.
@@ -95,12 +95,9 @@ export default function Instrucoes() {
             <img
         src={seta} 
       alt="Seta indicando"
-       className="mx-auto mt-10 h-20 w-auto animate-bounce"
-  />
+       className="mx-auto mt-10 h-20 w-auto animate-bounce"/>
         </div>
-
-        
-        
+ 
 
         <div className="space-y-6">
           {passos.map((passo) => (
