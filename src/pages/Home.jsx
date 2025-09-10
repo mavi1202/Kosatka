@@ -8,7 +8,7 @@ import Botaomonit from "../images/botaomonitoramento.png";
 import BotaoTurb from "../images/botaoTurb.png";
 import Botaotemp from "../images/botaotemp.png";
 import botaopH from "../images/botaopH.png";
-import Background_home from "../images/enhanced_seabed.png";
+import Background_home from "../images/seabed_resized.png";
 import Botaoaquaristas from "../images/botaoAquaristas.png";
 
 
@@ -120,7 +120,7 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
               </p>
             </div>
           </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+         <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-5xl">
   {[
     { 
       title: "Aquaristas Iniciantes",
@@ -149,32 +149,39 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
   ].map((audience, index) => (
     <Card
       key={index}
-      className="glass-card border-white/20 hover:border-cyan-500 transition-all duration-300 w-full h-[150px]"
+      className="glass-card border border-white/20 hover:border-cyan-500 transition-all duration-300 w-full h-[150px] bg-white/10 backdrop-blur-md"
     >
       <CardContent className="flex items-center gap-4 p-6 group cursor-pointer">
-    
-        <div className=" mt - 9 flex-shrink-0 w-45 h- flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+        {/* Ícone */}
+        <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
           <img
-            src={Botaoaquaristas}
+            src={audience.image}
             alt={audience.title}
-            className="w-25 h-25 object-contain mt-5"
+            className="w-12 h-12 object-contain"
           />
         </div>
 
-       
-        <div className="flex flex-col justify-center text-left">
+        {/* Texto */}
+        <div className="flex flex-col">
           <h3 className="text-lg font-bold text-white">{audience.title}</h3>
-          <p className="text-white/80 text-sm leading-snug">{audience.description}</p>
+          <p className="text-sm text-gray-200 leading-snug">
+            {audience.description}
+          </p>
         </div>
       </CardContent>
     </Card>
   ))}
 </div>
 
+
+      
+  
+
+
             
           </div>
       
-      </section>
+</section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 relative">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
