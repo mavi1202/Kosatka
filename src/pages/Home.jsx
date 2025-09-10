@@ -8,7 +8,7 @@ import Botaomonit from "../images/botaomonitoramento.png";
 import BotaoTurb from "../images/botaoTurb.png";
 import Botaotemp from "../images/botaotemp.png";
 import botaopH from "../images/botaopH.png";
-import Background_home from "../images/background_home.jpg";
+import Background_home from "../images/enhanced_seabed.png";
 import Botaoaquaristas from "../images/botaoAquaristas.png";
 
 
@@ -20,7 +20,7 @@ export default function Home() {
   style={{
     backgroundImage: `url(${Background_home})`,
     backgroundSize: "cover",
-    backgroundPosition: "center 140%",
+    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}
 >

@@ -9,7 +9,8 @@ import esp from "../images/esp32.jpg";
 import seta from "../images/seta pra baixo.png";
 
 export default function Produtos() {
-  const produtos = [
+
+  const produto = [
     {
       id: 1,
       nome: "Sensor de pH Digital",
@@ -19,6 +20,7 @@ export default function Produtos() {
       avaliacao: 4.8,
       descricao: "Sensor de pH digital de alta precisão para monitoramento contínuo da água do aquário.",
       especificacoes: ["Precisão: ±0.1 pH", "Faixa: 0-14 pH", "Conexão: Bluetooth", "Bateria: 6 meses"],
+      link:"https://www.eletrogate.com/sensor-de-ph-arduino-modulo-de-leitura?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24PHK3NXg08p2XGsKeYgEqdlEF8ACDg8rqAcPuIKCT6UXvZ9f9Gk7WgaAhvZEALw_wcB"
     },
     {
       id: 2,
@@ -29,17 +31,19 @@ export default function Produtos() {
       avaliacao: 4.9,
       descricao: "Termostato inteligente com controle automático de temperatura via app.",
       especificacoes: ["Potência: 100W", "Faixa: 18-32°C", "Precisão: ±0.5°C", "WiFi integrado"],
+      link:"https://www.eletrogate.com/sensor-de-temperatura-ds18b20-a-prova-dagua?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24MpUMt4Uf2ujCYj1itBubEU0OxY1yO4LjMDpAXMwKhtdpzS9I7_qRoaAtoXEALw_wcB"
     },
     {
       id: 3,
       nome: "Sensor de Turbidez",
       preco: 104.12,
       imagem: turb,
-      link:"https://www.eletrogate.com/sensor-de-ph-arduino-modulo-de-leitura?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&srsltid=AfmBOorqqGXsPcQAiI-d44rbiteD7cgTmZmGBzG8OYaBMZGuVt-SYk-XnmQ",
       categoria: "Sensores",
       avaliacao: 4,
       descricao: "Sistema completo de turbidez para aquários até 200L.",
       especificacoes: ["Capacidade: 200L", "UV: 9W", "Vazão: 500L/h", "3 estágios de filtração"],
+      link:"https://www.breletronica.com.br/modulo-de-deteccao-de-mistura-de-agua-sensor-de-turbidez?utm_source=Site&utm_medium=GoogleShopping&utm_campaign=IntegracaoGoogle&gad_source=1&gad_campaignid=20944641502&gbraid=0AAAAAquWLeFoQDDE8CeZ-Qn0FsKCtuOLN&gclid=Cj0KCQjwoP_FBhDFARIsANPG24P1WJuJb4Fu3NscvDx510CZ0SPSxoBX-hlcPnghSCabhRxJ0CUTOPoaApqEEALw_wcB"
+    
     },
     {
       id: 4,
@@ -50,6 +54,7 @@ export default function Produtos() {
       avaliacao: 4.6,
       descricao: "Leds simples",
       especificacoes: ["Tensão: 3.2 ~3.8V", "Luminosidade: 20.000 MCD","Corrente máxima: 25mA"],
+      link:"https://www.amazon.com.br/Kit-com-LEDs-Diversos-Difusos/dp/B0C676BZX7/ref=asc_df_B0C676BZX7?mcid=f21538bd619d351c808cdc5fb01602b6&tag=googleshopp00-20&linkCode=df0&hvadid=709857928272&hvpos=&hvnetw=g&hvrand=6259928668151687202&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197118&hvtargid=pla-2275934781080&psc=1&language=pt_BR&gad_source=1"
     },
     {
       id: 5,
@@ -60,6 +65,7 @@ export default function Produtos() {
       avaliacao: 4.5,
       descricao: "Filamento branco",
       especificacoes: [ "1,75 mm ± 0,02 mm", "PLA"],
+      link:"https://voolt3d.com.br/produtos/filamento-pla-branco-velvet-premium/"
     },
     {
       id: 6,
@@ -70,10 +76,121 @@ export default function Produtos() {
       avaliacao: 5,
       descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
       especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
+    },
+    {
+      id: 6,
+      nome: "ESP 32",
+      preco: 47.9,
+      imagem: esp,
+      categoria: "Esp32",
+      avaliacao: 5,
+      descricao: "Microcontrolador ESP32, baixo custo e consumo, com Wi-Fi integrado.",
+      especificacoes: ["ESP32 ESP-WROOM-32 DEVKit V1.", "WiFi 802.11 b/g/n: 2.4 à 2.5 GHz."],
+      link:"https://www.eletrogate.com/modulo-wifi-esp32-bluetooth-30-pinos?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=1&gad_campaignid=22486202127&gbraid=0AAAAADqxjs8xbeaFVNVsu7ExsJuRkUF92&gclid=Cj0KCQjwoP_FBhDFARIsANPG24NCh7D7FVU-7uE7sJw7RRPBzEuOfMl906IXkkvUx6NvfhCpRvQD6wAaAidxEALw_wcB"
     },
   ];
 
-  const valorTotal = produtos.reduce((total, produto) => total + produto.preco, 0);
+  const valorTotal = produto.reduce((total, produto) => total + produto.preco, 0);
 
   return (
     <div
@@ -106,7 +223,7 @@ export default function Produtos() {
 
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {produtos.map((produto) => (
+            {produto.map((produto) => (
               <div
                 key={produto.id}
                 className="glass-card border border-border hover:border-primary/50 transition-all duration-300 group rounded-lg overflow-hidden"
@@ -161,17 +278,17 @@ export default function Produtos() {
                       </span>
                     </div>
                     
-                   <a href="" 
-           target="_blank" 
-           rel="noopener noreferrer"
-          
-           > 
-
-                    <button className="aqua-button flex items-center px-3 py-2 rounded-lg text-white text-sm">
+                  
+                    <button 
+                     className="aqua-button flex items-center px-3 py-2 rounded-lg text-white text-sm"
+                           variant="outline"
+                            size="sm"
+                            onClick={() => window.open(produto.link, "_blank")}>      
+                        
                       <ShoppingCart className="w-4 h-4 mr-1" />
                       Comprar
                     </button>
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -232,10 +349,8 @@ export default function Produtos() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <button className="aqua-button flex items-center justify-center px-4 py-3 rounded-lg text-white text-lg">
-                    <ShoppingCart className="w-5 h-5 mr-2" />
-                    Comprar Projeto Completo
-                  </button>
+                
+
                 </div>
               </div>
             </div>
