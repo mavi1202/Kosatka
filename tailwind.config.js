@@ -1,14 +1,16 @@
-module.exports = {
-  darkMode: ["class"],
+
+export default {
+  darkMode: "class",
   content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "app/**/*.{ts,tsx,js,jsx}",
     "components/**/*.{ts,tsx,js,jsx}",
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -69,8 +71,10 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "ocean-gradient": "linear-gradient(135deg, #0891b2 0%, #0d9488 50%, #059669 100%)",
-        "deep-gradient": "linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)",
+        "ocean-gradient":
+          "linear-gradient(135deg, #0891b2 0%, #0d9488 50%, #059669 100%)",
+        "deep-gradient":
+          "linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,15 +84,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
 }

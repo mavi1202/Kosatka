@@ -97,7 +97,7 @@ export default function Jogo() {
             </div>
             
 
-           <a href="https://editor.gdevelop.io/" 
+           <a href="https://gd.games/mavi9583/melodic-trip" 
            target="_blank" 
            rel="noopener noreferrer" 
           className="w-full aqua-button text-lg py-6 flex items-center justify-center rounded-lg text-white bg-blue-500 hover:bg-blue-600"

@@ -1,6 +1,4 @@
-// src/AppRoutes.jsx
 import { Routes, Route } from "react-router-dom";
-
 import Layout from "../components/Layout"; 
 import Home from "../pages/Home";
 import Jogo from "../pages/Jogo";
@@ -12,18 +10,16 @@ import Produtos from "../pages/Produtos";
 
 export default function AppRoutes() {
   return (
- 
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/jogo" element={<Jogo />} />
-          <Route path="/instrucoes" element={<Instrucoes />} />
-          <Route path="/referencias" element={<Referencias />} />
-          <Route path="/sobrenos" element={<SobreNos />} />
-          <Route path="/produtos" element={<Produtos />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Layout>
-  
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jogo" element={<Jogo />} />
+        <Route path="/instrucoes" element={<Instrucoes />} />
+        <Route path="/referencias" element={<Referencias />} />
+        <Route path="/sobrenos" element={<SobreNos />} />
+        <Route path="/produtos" element={<Produtos />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Layout>
   );
 }

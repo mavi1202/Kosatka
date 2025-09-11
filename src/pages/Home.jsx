@@ -151,17 +151,17 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
       key={index}
       className="glass-card border border-white/20 hover:border-cyan-500 transition-all duration-300 w-full h-[150px] bg-white/10 backdrop-blur-md"
     >
-      <CardContent className="flex items-center gap-4 p-6 group cursor-pointer">
-        {/* Ícone */}
+      <CardContent className="flex items-center gap-6 p-5 group cursor-pointer h-full">
+    
         <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
           <img
             src={audience.image}
             alt={audience.title}
-            className="w-12 h-12 object-contain"
+            className="w-20 h-20 object-contain"
           />
         </div>
 
-        {/* Texto */}
+
         <div className="flex flex-col">
           <h3 className="text-lg font-bold text-white">{audience.title}</h3>
           <p className="text-sm text-gray-200 leading-snug">
