@@ -94,7 +94,7 @@ export function Navigation() {
             "text-sm font-medium transition-colors hover:text-primary px-2 py-1 rounded",
             pathname === item.href
               ? "text-primary bg-primary/10"
-              : "text-foreground/80"
+              : "text-foreground"
           )}
           onClick={() => setMobileMenuOpen(false)}
         >
