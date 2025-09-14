@@ -15,7 +15,7 @@ const navItems = [
   { name: "Quem Somos", href: "/sobrenos" },
   { name: "Referências", href: "/referencias" },
   { name: "Jogo", href: "/jogo" },
-   { name: "Erro", href: "/ErrorPage" }
+
 ]
 
 export function Navigation() {
