@@ -3,6 +3,7 @@ import  Button  from "../components/Button"
 import { Card, CardContent } from "../components/Card"
 import { ArrowRight, Download, Fish, Waves, Droplets } from "lucide-react"
 import logoClaro from "../images/logo-claro.png";
+import logoEscuro from "../images/logo-escuro.png"
 import KosatkaSub from "../images/KosatkaSub.png";
 import Botaomonit from "../images/botaomonitoramento.png";
 import BotaoTurb from "../images/botaoTurb.png";
@@ -10,10 +11,13 @@ import Botaotemp from "../images/botaotemp.png";
 import botaopH from "../images/botaopH.png";
 import Background_home from "../images/seabed_resized.png";
 import Botaoaquaristas from "../images/botaoAquaristas.png";
+import { useTheme } from "../context/ThemeContext"
 
 
 
 export default function Home() {
+    const { theme } = useTheme()
+  
   return (
     <div
   className="page-background"
@@ -35,12 +39,14 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-4">
-                  <img src={logoClaro} alt="Logo" className="h-9.5 w-9.5 object-contain floating-element" />
+                  <img  
+                  src={theme === "dark" ? logoClaro: logoEscuro}
+                   alt="Logo" className="h-9.5 w-9.5 object-contain floating-element" />
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white drop-shadow-lg">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-foreground drop-shadow-lg">
                   KOSATKA
                 </h1>
-                <p className="max-w-[600px] text-white/90 md:text-xl drop-shadow mt-9 mb-5 ">
+                <p className="max-w-[600px] text-foreground md:text-xl drop-shadow mt-9 mb-5 ">
                   Dispositivo subaquático desenvolvido para monitorar a qualidade da água em aquários e tanques, medindo parâmetros como pH e acidez, além de liberar substâncias reguladoras automaticamente.Tecnologia que transforma seu aquário em um ecossistema perfeitamente equilibrado.
                 </p>
               </div>
@@ -70,10 +76,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className=" gap-6 md text-3xl font-bold tracking-tighter md:text-4xl mb-4  text-white drop-shadow-lg ">
+              <h2 className=" gap-6 md text-3xl font-bold tracking-tighter md:text-4xl mb-4  text-foreground drop-shadow-lg ">
                 Diferenciais do Kosatka
               </h2>
-              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow mb-15">
+              <p className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow mb-15">
                 
 Conheça os recursos que tornam nosso projeto único e valioso para nossos usuários.
               </p>
@@ -99,8 +105,8 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
           className="w-32 h-32 object-contain"
         />
       </div>
-      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-      <p className="text-white/80">{feature.description}</p>
+      <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
+      <p className="text-foreground">{feature.description}</p>
     </CardContent>
   ))}
 </div>
@@ -112,10 +118,10 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mt--15  text-white drop-shadow-lg">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl mt--15 text-foreground drop-shadow-lg">
                Público Alvo
               </h2>
-              <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
+              <p className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow">
                 Nosso projeto foi desenvolvido pensando nas necessidades específicas de:
               </p>
             </div>
@@ -157,14 +163,14 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
           <img
             src={audience.image}
             alt={audience.title}
-            className="w-20 h-20 object-contain"
+            className="w-50 h-50 object-contain"
           />
         </div>
 
 
         <div className="flex flex-col">
-          <h3 className="text-lg font-bold text-white">{audience.title}</h3>
-          <p className="text-sm text-gray-200 leading-snug">
+          <h3 className="text-lg font-bold text-foreground">{audience.title}</h3>
+          <p className="text-sm text-foreground leading-snug">
             {audience.description}
           </p>
         </div>
@@ -173,12 +179,6 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
   ))}
 </div>
 
-
-      
-  
-
-
-            
           </div>
       
 </section>
@@ -188,10 +188,10 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-white drop-shadow-lg">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-foreground drop-shadow-lg">
                 Pronto para começar?
               </h2>
-              <p className="max-w-[600px] md:text-xl/relaxed text-white/90 drop-shadow">
+              <p className="max-w-[600px] md:text-xl/relaxed text-foreground drop-shadow">
                 Baixe nosso aplicativo agora e transforme seu aquário em um ecossistema inteligente.
               </p>
             </div>
@@ -200,9 +200,9 @@ Conheça os recursos que tornam nosso projeto único e valioso para nossos usuá
               <Button
                 variant="outline"
                 size="lg"
-                className="glass-card border-white/30 text-white hover:bg-white/10 bg-transparent"
+                className="glass-card border-white/30 text-foreground hover:bg-white/10 bg-transparent"
               >
-                <Download className="mr-2 h-4 w-4" /> Download 
+                <Download className="text-foreground mr-2 h-4 w-4" /> Download 
               </Button>
             </div>
           </div>

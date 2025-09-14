@@ -1,17 +1,31 @@
-import { Link } from "react-router-dom";
-import Button from "../components/Button";
-import { Card, CardContent } from "../components/Card";
+import { Link } from "react-router-dom"
+import Button from "../components/Button"
+import { Card, CardContent } from "../components/Card"
+import errorclaro from "../images/kosatka_error_background_light.png"
+import erroresc from "../images/kosatka_error_background_dark.png"
+import { useTheme } from "../context/ThemeContext"
 
 const ErrorPage = () => {
+  const { theme } = useTheme()
+   const bgImage = theme === "dark" ? erroresc : errorclaro
+
   return (
     <div
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-error"
-      style={{ backgroundImage: "url(/images/bg-error.jpg)" }}
+      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
     >
-      <Card className="text-center max-w-md mx-auto">
+      <Card className="text-center max-w-md mx-auto backdrop-blur-sm shadow-xl rounded-2xl border border-white/20">
         <CardContent>
-          <div className="w-24 h-24 bg-ocean-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          <div className="w-24 h-24 bg-ocean-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">
+            <svg
+              className="w-12 h-12 text-foreground"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -21,36 +35,45 @@ const ErrorPage = () => {
             </svg>
           </div>
 
-          <h1 className="text-4xl font-bold text-deep-800 dark:text-white mb-4">404</h1>
-          <h2 className="text-2xl font-semibold text-deep-800 dark:text-white mb-4">Página Não Encontrada</h2>
-          <p className="text-deep-600 dark:text-deep-300 mb-8">
-            Ops! Parece que você navegou para águas desconhecidas. A página que você está procurando não existe ou foi
-            movida.
+       
+          <h1 className="text-5xl font-bold text-foreground mb-2">404</h1>
+          <h2 className="text-2xl font-semibold text-foreground mb-6">
+            Página Não Encontrada
+          </h2>
+
+          <p className="text-foreground/80 mb-8 leading-relaxed">
+            Ops! Parece que você navegou para águas desconhecidas. A página que
+            você está procurando não existe ou foi movida.
           </p>
 
           <div className="space-y-4">
             <Link to="/">
-              <Button size="lg" className="w-full">
+              <Button variant="outline" size="lg" className="w-full bg-transparent border border-foreground/40 hover:border-foreground mb-2">
                 Voltar ao Início
               </Button>
             </Link>
 
             <Link to="/jogo">
-              <Button variant="outline" size="lg" className="w-full bg-transparent">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full bg-transparent border border-foreground/40 hover:border-foreground"
+              >
                 Ir para o Jogo
               </Button>
             </Link>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-deep-200 dark:border-deep-600">
-            <p className="text-sm text-deep-500 dark:text-deep-400">
+          {/* Rodapé */}
+          <div className="mt-8 pt-6 border-t border-foreground/20">
+            <p className="text-sm text-foreground/70">
               Se você acredita que isso é um erro, entre em contato conosco.
             </p>
           </div>
         </CardContent>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default ErrorPage;
+export default ErrorPage
