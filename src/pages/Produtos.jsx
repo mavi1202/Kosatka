@@ -141,7 +141,7 @@ export default function Produtos() {
               <h1 className="text-4xl font-bold text-foreground mb-8">
                 Materiais do projeto, em detalhes.
               </h1>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              <p className="text-foreground text-lg max-w-2xl mx-auto">
                 Nesta página, você confere os componentes usados no desenvolvimento do sistema de monitoramento, junto com seus respectivos valores.
               </p>
               <img
