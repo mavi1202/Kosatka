@@ -102,7 +102,7 @@ export function Navigation() {
           {item.name}
         </Link>
       ))}
-    </nav>
+    </nav>  
   </div>
 )}
 

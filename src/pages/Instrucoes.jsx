@@ -168,25 +168,29 @@ export default function Instrucoes() {
           </div>
 
           <Card className="border border-white/20 max-w-2xl mx-auto mb-8 mt-12">
-            <CardContent className="p-6">
-              <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center mb-4">
-                <div className="text-center">
-                  <Play className="w-16 h-16 text-ocean-400 mx-auto mb-2" />
-                  <p className="text-foreground">Vídeo Demonstrativo</p>
-                  <p className="text-foreground text-sm">
-                    Assista ao processo completo de instalação
-                  </p>
-                </div>
-              </div>
-              <Button className=" text-foreground w-full">
-                <Play className=" text-foreground w-4 h-4 mr-2" />
-                Assistir Vídeo Tutorial
-              </Button>
-            </CardContent>
-          </Card>
-          <p className="text-center text-foreground max-w-lg mx-auto">
-            Assista ao vídeo e conheça como nosso sistema monitora e cuida do aquário de forma prática, eficiente e automática.
-          </p>
+  <CardContent className="p-6">
+    <div className="aspect-video rounded-lg overflow-hidden mb-4">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/HGS5FDxmSnM
+"
+        title="Vídeo Demonstrativo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    <Button className="text-foreground w-full">
+      <Play className="text-foreground w-4 h-4 mr-2" />
+      Assistir Vídeo Tutorial
+    </Button>
+  </CardContent>
+</Card>
+
+<p className="text-center text-foreground max-w-lg mx-auto">
+  Assista ao vídeo e conheça como nosso sistema monitora e cuida do aquário de forma prática, eficiente e automática.
+</p>
+
         </div>
       </div>
     </div>
